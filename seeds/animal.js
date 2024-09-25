@@ -1,0 +1,50 @@
+module.exports = () => {
+    return [
+        {
+            id: 1,
+            userId: 1,
+            nom: 'Pollita',
+            espece: 'Chien',
+            race: 'Spitz Allemande',
+            couleur: 'Noir',
+            sexe: 'Female',
+            poids: '5',
+            sterilisation: 'non',
+            information: 'Opération du tendon fléchisseur superficiel des doigts chez le chien suite à une luxation ',
+            date_naissance: new Date(),
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },
+        {
+            id: 2,
+            userId: 2,
+            nom: 'Mininu',
+            espece: 'Chat',
+            race: 'Siamois',
+            couleur: 'Noir',
+            sexe: 'Female',
+            poids: '3',
+            sterilisation: 'non',
+            information: "rupture d'un ligament croisé crânial chez le chien",
+            date_naissance: new Date(),
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        },
+        {
+            id: 3,
+            userId: 2,
+            nom: 'Luky',
+            espece: 'Chien',
+            race: 'Labrador',
+            couleur: 'Noir',
+            sexe: 'male',
+            poids: '15',
+            sterilisation: 'non',
+            information: 'Operation pâte droit',
+            date_naissance: new Date(),
+            createdAt: new Date(),
+            updatedAt: new Date(),
+        }
+    ]
+        ;
+};

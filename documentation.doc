@@ -1,0 +1,51 @@
+https://www.youtube.com/watch?v=PuwGdowtm5s para el mapa
+https://www.colorhexa.com/d3d3d3 por los colores
+https://www.youtube.com/watch?v=a1hhL9z-fbU para conneccion google
+https://dashboard.emailjs.com/admin pour le mail
+https://blog.echobind.com/integrating-prettier-eslint-airbnb-style-guide-in-vscode-47f07b5d7d6a 
+https://www.journaldunet.fr/web-tech/developpement/1441095-comment-corriger-l-erreur-npm-elifecycle-sous-node-js/#:~:text=L%27erreur%20%22ELIFECYCLE%22%20ne,bon%20d%C3%A9roulement%20de%20l%27application 
+https://www.youtube.com/watch?v=hggvCij14F0&list=PL8Azg5184hTAg-HoFByqlA43EmyREWCge&index=3 
+https://www.youtube.com/watch?v=6F1kvoHgjNY&list=PL8Azg5184hTAg-HoFByqlA43EmyREWCge 
+https://sequelize.org/master/identifiers.html#associations 
+https://www.freecodecamp.org/news/state-management-with-react-hooks/ 
+https://dev.to/achowba/building-a-modal-in-react-15hg 
+https://github.com/Rulox/react-atomic-structure/tree/master/app/components/templates/Home
+
+
+killall -9 node
+env= SKIP_PREFLIGHT_CHECK=true
+npm i emailjs-com --save pour le email
+npm install react-google-maps
+npm install react-google-login
+npm install node-sass
+
+npm i axios
+npx create-react-app client
+
+npm run start:watch
+
+npx sequelize init
+npw sequelize --help
+npx sequelize db:seed:all
+npx sequelize db:migrate
+npx sequelize-cli db:migrate:undo:all
+npx sequelize-cli db:migrate --debug
+npx sequelize-cli db:migrate:undo:all
+npx sequelize db:drop
+npx sequelize db:create
+
+npx sequelize-cli model:generate --name user --attributes first_name:string  last_name:string email:string password:string
+npx sequelize-cli model:generate --name animal --attributes id_user:string
+
+
+Primer Paso: luego de crear la carpeta back en el terminal ejecute la linea de comando npm init para crear el package.json hay que darle enter hasta el final
+Segundo: luego copie todo las librarias a utilizar he hice un npm instal para crearlas
+luego en dev escribi dev": "nodemon server.js" y enseguida cree el archivo server.js
+luego de escribir todas los paquetes requerido cree el fichero database para conectar la base de datos
+luego cree el fichero models para crear el archivo User.js con sus lineas de comando
+luego cree el fichero routes con el archivo Users.js con sus lineas de comando
+
+luego ejecute npm run dev 
+
+luego instale react dentro de mi projecto con el comando npx create-react-app client
+
