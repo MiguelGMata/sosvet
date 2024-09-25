@@ -1,0 +1,22 @@
+.navbar-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;    
+    width: 100%;
+    padding: 10px;
+    background-color: var(--rose);
+    position: fixed;
+    bottom: 0;
+}
+
+@media (min-width: 768px) {
+    .navbar-content {
+        bottom: auto;
+    }
+}
+
+@media (max-width: 767px) {
+    .navbar-content .logo{
+        display: none;
+    }
+}

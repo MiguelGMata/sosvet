@@ -1,0 +1,33 @@
+:root{
+    --dark-blue: #1201b3;
+    --black: #333;
+    --fuchsia: #ef5a8d;
+    --green: #039b9d;
+    --rose: #ffb4d9;
+    --red: #fa2a71;
+    --white: #fff;
+    --orange: #ff6f00ce;
+    --yellow: #e79f24; 
+    --grey: #e0d8d8;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    color: var(--black);
+    scroll-behavior: smooth;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+}
