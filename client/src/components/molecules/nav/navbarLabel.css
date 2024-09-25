@@ -1,11 +1,21 @@
 .navbar-label{
+    width: 100%;
+    padding: 10px;
+    overflow: hidden;
+}
+
+.navbar-label ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
     flex-direction: row;
-    padding: 10px;
-    gap: 20px;
+    width: 100%;
+    gap: 10px;
+}
+
+.navbar-label ul li{
+    text-decoration: none;
+    list-style: none;
 }
 
 .navbar-btn {    
@@ -15,6 +25,8 @@
     justify-content: center;
     text-decoration: none;
     width: 100px;
+    height: 80px;
+    padding: 10px;
 }
 
 .navbar-btn span {
@@ -25,22 +37,32 @@
 }
 
 .navbar-btn span:hover {
-    color:var(--red)
+    color:var(--red);
 }
-
+.navbar-label li.active span{
+    color:var(--red);      
+}
+.navbar-label li.active img{
+    transform: scale(0.9);
+    transition: 0.5s;
+}
+ 
 @media (min-width: 768px) {
-    .navbar-label{
+    .navbar-label ul {
       justify-content: end;
     }
     .navbar-btn {  
-        padding: 5px 80px;     
+        height: 50px;
+        padding: 10px 70px;     
         border-radius: 50px;
         background-color: var(--fuchsia);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     }
 
-    .navbar-btn:hover {  
-        background-color: var(--green);    
+    .navbar-btn:hover,
+    .navbar-label li.active .navbar-btn {  
+        background-color: var(--green);
+        transition: 0.5s ease-in-out;    
     }
     .navbar-btn img {
         display: none;
@@ -50,8 +72,9 @@
         font-size: 16px;
         padding: 10px;
     }
-    .navbar-btn span:hover {
-        color: var(--white);
+    .navbar-btn span:hover,
+    .navbar-label li.active span{
+        color: var(--white);  
     }
 
 }

@@ -7,12 +7,19 @@
     background-color: var(--rose);
     position: fixed;
     bottom: 0;
+    gap: 10px;
+}
+
+.logo{
+    border-radius: 10px;   
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 768px) {
     .navbar-content {
         bottom: auto;
     }
+    
 }
 
 @media (max-width: 767px) {
