@@ -60,7 +60,7 @@ module.exports = {
                         userData.password = hash
                         models.User.create(userData)
                             .then(user => {
-                                res.json({ status: user.email + ' Inscrit!' })
+                                res.json({ status: user.email + ' Inscrit!, vous pouvez vous connecter maintenant !' })
                             })
                             .catch(err => {
                                 res.send('Erreur : ' + err)
