@@ -1,15 +1,15 @@
 import React from 'react';
 import Title from '../../atoms/title/Title';
-import './cardProfile.css';
+import './cardAnimal.css';
 
 
 const CardAnimal = ({ nom, espece,  race, couleur, sexe, poids, sterilisation, date_naissance, information  }) => {
   return (
-    <div className="card-profile">
-      <div className="card-header">
+    <div className="card-animal">
+      <div className="card-header-animal">
         <Title>{`${nom}`}</Title>
       </div>
-      <div className="card-body">
+      <div className="card-body-animal">
         <p><strong>Espèce :</strong>{espece}</p>
         <p><strong>Race :</strong>{race}</p>
         <p><strong>Couleur :</strong>{couleur}</p>

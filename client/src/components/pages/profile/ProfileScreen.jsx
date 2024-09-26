@@ -43,13 +43,13 @@ const ProfileScreen = () => {
     return (
         <>
         <main className='main-profileScreen'>
-        <Image className="image-profile" image="https://ik.imagekit.io/logoMGM/sosvet/logo-.webp?updatedAt=1727378751576" width="200px" height="200px"/>
-        <Title className="title-profile">Bienvenu à votre profil</Title>
             <section className="section-profile">
                 <div className="block-profile">
+                    <Image className="image-profile" image="https://ik.imagekit.io/logoMGM/sosvet/logo-.webp?updatedAt=1727378751576" width="200px" height="200px"/>
+                    <Title className="title-profile">Bienvenu à votre profil</Title>
                     <CardProfile  firstName={userProfile.first_name} lastName={userProfile.last_name} email={userProfile.email}/> 
                 </div>
-                <div className="block-profile">
+                <div className="block-profile-b">
                     { 
                         perfilsAni.length !== 0 ? 
                         <CardAnimal 

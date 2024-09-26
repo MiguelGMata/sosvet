@@ -8,7 +8,7 @@ const SignupScreen = () => {
     return (
         <>
         <main className='main-signupScreen'>
-        <Image image="https://ik.imagekit.io/logoMGM/sosvet/gatico.jpg?updatedAt=1727343930980" width='30%' height='30%' className="image-contact"/>
+        <Image image="https://ik.imagekit.io/logoMGM/sosvet/gatico.jpg?updatedAt=1727343930980" width='30%' height='40%' className="image-contact"/>
             <section className="section-signupScreen">
                 <FormSingup />
             </section>

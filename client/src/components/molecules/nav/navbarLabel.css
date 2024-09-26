@@ -10,12 +10,12 @@
     justify-content: center;
     flex-direction: row;
     width: 100%;
-    gap: 10px;
 }
 
 .navbar-label ul li{
     text-decoration: none;
     list-style: none;
+    padding: 0;
 }
 
 .navbar-btn {    
@@ -37,20 +37,15 @@
     color: var(--white);
 }
 
-.navbar-btn span:hover {
-    color:var(--red);
-}
-.navbar-label li.active span{
-    color:var(--red);      
-}
 .navbar-label li.active img{
     transform: scale(0.9);
-    transition: 0.5s;
+    transition: 0.3s;
 }
  
 @media (min-width: 768px) {
     .navbar-label ul {
       justify-content: end;
+      gap: 20px;
     }
     .navbar-btn {  
         height: 50px;
@@ -78,4 +73,12 @@
         color: var(--white);  
     }
 
+}
+
+@media (max-width: 767px) {
+    .navbar-label ul li{
+        display: flex;
+        align-items: center;
+        width: 20%;
+    }
 }

@@ -1,28 +1,29 @@
-.card-profile {
-    background-color: #f9f9f9;
+.card-veterinarians {
+    background-color: #ffe1ef;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     padding: 20px;
     max-width: 400px;
+    margin: 10vh auto;
     text-align: center;
   }
   
-  .card-header {
+  .card-header-veterinarians {
     margin-bottom: 20px;
   }
   
-  .card-body p {
+  .card-body-veterinarians p {
     margin: 10px 0;
     font-size: 1em;
     color: #555;
     text-align: left;
   }
   
-  .card-body p strong {
+  .card-body-veterinarians p strong {
     color: var(--green); 
   }
   
-  .card-body p:first-child {
+  .card-bod-veterinarians p:first-child {
     margin-top: 0;
   }
 

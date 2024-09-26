@@ -11,7 +11,7 @@ const LoginScreen = () => {
             <section className="section-loginScreen">
                 <FormLogin />
             </section>
-            <Image image="https://ik.imagekit.io/logoMGM/sosvet/vetochien.jpg?updatedAt=1727343931035" width='30%' height='30%' className="image-contact"/>
+            <Image image="https://ik.imagekit.io/logoMGM/sosvet/vetochien.jpg?updatedAt=1727343931035" width='30%' height='40%' className="image-contact"/>
           </main>
         </>
     );

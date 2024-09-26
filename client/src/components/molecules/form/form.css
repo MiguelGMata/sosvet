@@ -5,10 +5,11 @@
     align-items: center;
     min-width: 80vw;
     min-height: 70vh;
-    background-color: #fbcbe3;
+    background-color: #ef5a8d;             
     padding: 20px;
     border-radius: 30px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
   }
   
 .form {
@@ -27,6 +28,7 @@
       padding: 40px;
       border-radius: 10px;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      color: #333;
     }
      
     .form {

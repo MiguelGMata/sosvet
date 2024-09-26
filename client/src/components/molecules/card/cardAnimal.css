@@ -1,28 +1,29 @@
-.card-profile {
+.card-animal {
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 400px;
+    margin: 10vh auto;
     text-align: center;
   }
   
-  .card-header {
+  .card-header-animal {
     margin-bottom: 20px;
   }
   
-  .card-body p {
+  .card-body-animal p {
     margin: 10px 0;
     font-size: 1em;
     color: #555;
     text-align: left;
   }
   
-  .card-body p strong {
+  .card-body-animal p strong {
     color: var(--green); 
   }
   
-  .card-body p:first-child {
+  .card-body-animal p:first-child {
     margin-top: 0;
   }
 

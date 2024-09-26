@@ -39,7 +39,7 @@ const NavbarLabel = ({ activeBtn, handleClick }) => {
                     <span>Inscription</span>  
                     </Link>
                 </li>
-                <li className={activeBtn === 'contact' ? 'active' : '' } onClick={() => handleClick('Contact')}>
+                <li className={activeBtn === 'contact' ? 'active' : '' } onClick={() => handleClick('contact')}>
                     <Link to="/contact" className="navbar-btn">
                         <LogoBtn image="./veto.png"/>
                         <span>Contact</span>
@@ -95,24 +95,3 @@ const NavbarLabel = ({ activeBtn, handleClick }) => {
     );
 };
 export default NavbarLabel;
-
-
-/**                <div className="navbar-btn">
-                    <Link to="/" className={activeBtn === 'home' ? 'active' : '' } onClick={() => handleClick('home')}>
-                    <LogoBtn image="./home.png"/>
-                    <span>Accueil</span>
-                    </Link>
-                </div>
-       
-                <Link to="/connexion" className={activeBtn === 'connexion' ? 'active' : '' } onClick={() => handleClick('connexion')}>
-                <div className="navbar-btn">
-                    <LogoBtn image="./connexion.png"/>
-                    <span>Connexion</span>
-                </div>
-            </Link>
-            <div to="/inscription" className="navbar-btn">
-     
-            </div>
-            <div to="/contact" className="navbar-btn">
-     
-            </div> */

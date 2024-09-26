@@ -4,17 +4,39 @@
     justify-content: space-between;    
     width: 100%;
     padding: 10px;
-    background-color: var(--rose);
     position: fixed;
     bottom: 0;
     gap: 10px;
     z-index: 1000;
+    border-bottom: 5px solid rgba(255,255,255,0.5);
+    background: linear-gradient(45deg,#ef5a8d, #ea0654, #ef5a8d);
+    animation: borderGlow 2s ease-in-out infinite;
 }
 
 .logo{
     border-radius: 10px;   
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
 }
+
+@keyframes borderGlow {
+    0% {
+        border-bottom: 5px solid rgba(255, 0, 157, 0.507);
+      }
+      50% {
+        border-bottom: 5px solid rgba(255, 255, 255, 0.447);      
+      }
+      100% {
+        border-bottom: 5px solid rgba(255, 0, 157, 0.507);      
+      }
+    }
+           
+  
+  
+  .element {
+    border-bottom: 5px solid rgba(255, 255, 255, 0.5);
+    animation: borderGlow 2s infinite ease-in-out;
+  }
+  
 
 @media (min-width: 768px) {
     .navbar-content {
@@ -24,7 +46,25 @@
 }
 
 @media (max-width: 767px) {
+    .navbar-content {
+        border-top: 5px solid rgba(255,255,255,0.5);
+        animation: borderglo 2s ease-in-out infinite;
+    }
+
+        
+    @keyframes borderglo {
+        0% {
+        border-top: 5px solid rgba(255, 0, 157, 0.507);
+        }
+        50% {
+        border-top: 5px solid rgba(255, 255, 255, 0.447); 
+        }
+        100% {
+        border-top: 5px solid rgba(255, 0, 157, 0.507);  
+        }
+    }
     .navbar-content .logo{
         display: none;
     }
+
 }
