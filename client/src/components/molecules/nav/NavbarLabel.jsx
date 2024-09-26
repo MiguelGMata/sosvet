@@ -8,7 +8,7 @@ import './NavbarLabel.css';
 const NavbarLabel = ({ activeBtn, handleClick }) => {
     const navigate = useNavigate();
 
-    const logOut = () => {
+    const logOut = (e) => {
         e.preventDefault();
         try {
           localStorage.removeItem('token');
@@ -77,11 +77,11 @@ const NavbarLabel = ({ activeBtn, handleClick }) => {
                         <span>Veterinaire</span>
                     </Link>
                 </li>
-                <li>
-                    <button onClick={logOut} className="navbar-btn">
+                <li className={activeBtn === 'deconnexion' ? 'active' : '' } onClick={() => handleClick('deconnexion')}>
+                    <div onClick={logOut} className="navbar-btn">
                         <LogoBtn image="./deconnecter.png" />
                         <span>Déconnexion</span>
-                    </button>
+                    </div>
                 </li>
             </ul>    
         </div>

@@ -1,23 +1,38 @@
 import React, { useState } from 'react';
+import { loginUser } from '../../services/useServices';
+import { useNavigate } from 'react-router-dom';
 import Input from '../../atoms/input/Input';
 import Button from '../../atoms/button/Button';
 import Title from '../../atoms/title/Title';
 import Label from '../../atoms/label/Label';
+import Span from '../../atoms/span/Span';
+
 import './form.css';
 
 
 const FormLogin = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
+  const navigate = useNavigate();
 
-  const handleLogin = () => {
-    // Lógica de inicio de sesión
+  const handleLogin = async (e) => {
+    e.preventDefault()
+    try{
+        const data = await loginUser(email, password);
+        if(data){
+          navigate('/profil')
+        }
+    } catch(error){
+      setErrorMessage(error.response.data.description);
+    }
   };
 
   return (
     <div className="login-screen">
         <Title className="title-form">Connexion</Title>
         <p>Connectez-vous en quelques clics</p>
+        {errorMessage && <Span className="error-message">{errorMessage}</Span>}
       <div className="form">
         <Label htmlFor="email" text="Email" />
         <Input

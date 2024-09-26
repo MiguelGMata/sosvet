@@ -27,6 +27,7 @@
     width: 100px;
     height: 80px;
     padding: 10px;
+    cursor: pointer;
 }
 
 .navbar-btn span {

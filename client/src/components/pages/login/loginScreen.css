@@ -16,6 +16,6 @@
   .image-contact{
     width:'30%';
     height:'10%';
-
+    border-radius: 30px;
   }
 }
