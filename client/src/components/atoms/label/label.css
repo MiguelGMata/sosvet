@@ -1,0 +1,12 @@
+.label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  @media (min-width: 768px) {
+    .label {
+      font-size: 16px;
+    }
+  }
+  

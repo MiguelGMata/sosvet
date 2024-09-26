@@ -14,7 +14,7 @@ const Navbar = () => {
 
     return (
         <nav className="navbar-content">
-            <Logo className="logo"image="./logososvet.png" />
+            <Logo className="logo" image="./logososvet.png" />
             <NavbarLabel 
                 activeBtn={activeBtn} 
                 handleClick={handleActiveBtn}

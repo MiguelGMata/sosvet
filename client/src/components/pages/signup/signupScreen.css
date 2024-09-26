@@ -1,0 +1,18 @@
+.main-signupScreen{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.section-signupScreen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  @media (min-width: 768px) {
+  
+  }

@@ -1,7 +1,15 @@
 .logo{
     width: 10%;
 }
+.logo-header{
+    width: 50%;
+}
+.logo-general{
+width: 50%;
 
+}
 @media (min-width: 1024px){
- 
+    .logo-header{
+        width: 25%;
+    }
 }

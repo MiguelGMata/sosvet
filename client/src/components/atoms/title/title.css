@@ -1,0 +1,23 @@
+.title{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 2rem
+}
+
+.title-form {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+    margin: 20px;
+  }
+  
+
+@media (min-width: 768px){
+    .title-header{
+        font-size: 3rem
+    }
+    .title-form {
+        margin: 60px;
+    }
+}
+

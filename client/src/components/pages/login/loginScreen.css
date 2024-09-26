@@ -1,0 +1,21 @@
+.main-loginScreen{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.section-loginScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .image-contact{
+    width:'30%';
+    height:'10%';
+
+  }
+}
