@@ -41,11 +41,15 @@
     gap: 2rem;
   }
   
-  .footer-column h3 {
-    font-size: 1.2rem;
+  .footer-column a {
+    font-size: 1rem;
     margin-bottom: 1rem;
+    text-decoration: none;
+    color: inherit;
   }
-  
+  .footer-column a:hover {
+    text-decoration: underline;
+  }
   .footer-column ul {
     list-style: none;
     padding: 0;

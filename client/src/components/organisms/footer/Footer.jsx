@@ -13,7 +13,7 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <div className="footer-column">
-          <h3><a href="/contact">Contactez-nous</a></h3>
+            <a href="/contact">Contactez-nous</a>
             <ul>
               <li><a href="#about"><FaMapMarkerAlt/>56 rue Sadi Carnot, Paris 75020</a></li>
               <li><a href="#careers"><FaEnvelope /> contact@sosvet.com</a></li>
