@@ -1,14 +1,4 @@
 {
-  "rewrites": [
-    {
-      "source": "/sos/(.*)",
-      "destination": "/server.js"
-    },
-    {
-      "source": "/(.*)",
-      "destination": "/client/index.html"
-    }
-  ],
   "builds": [
     {
       "src": "client/package.json",
@@ -18,6 +8,16 @@
     {
       "src": "server.js",
       "use": "@vercel/node"
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/sos/(.*)",
+      "destination": "/server.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/client/index.html"
     }
   ]
 }
