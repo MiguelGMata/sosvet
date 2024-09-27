@@ -1,8 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import LogoBtn from '../../atoms/logoBtn/LogoBtn';
-
-import './NavbarLabel.css';
+import './navbarLabel.css';
 
 
 const NavbarLabel = ({ activeBtn, handleClick }) => {
