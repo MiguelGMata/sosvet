@@ -1,8 +1,10 @@
 import React,{ useState, useEffect } from 'react';
 import { veterinarianGet } from '../../services/useServices';
 import Search from '../../atoms/search/search';
-import './searchBar.css';
 import CardVeterinarians from '../card/CardVeterinarians';
+import GoogleMap from '../map/GoogleMap';
+import './searchBar.css';
+
 
 const SearchBar = ({ className }) => {
     const [search, setSearch] = useState('');
@@ -10,6 +12,7 @@ const SearchBar = ({ className }) => {
     const [filterVet, setFilterVet] = useState([])
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [adressList, setAdressList] = useState('');
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -52,6 +55,7 @@ const SearchBar = ({ className }) => {
             </div>
             <div className={`searchBar-block ${className}`}>
                 <CardVeterinarians veterinarians={filterVet.length > 0 ? filterVet : veterinarian} />
+                <GoogleMap veterinarians={filterVet.length > 0 ? filterVet : veterinarian} />
             </div>
       </div>
     );

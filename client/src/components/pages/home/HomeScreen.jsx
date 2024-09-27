@@ -2,7 +2,7 @@ import React from 'react';
 import './homeScreen.css';
 import HomeHeader from '../../organisms/header/HomeHeader';
 import SearchBar from '../../molecules/search/SearchBar';
-
+import GoogleMap from '../../molecules/map/GoogleMap';
 const HomeScreen = () => {
 
     return(

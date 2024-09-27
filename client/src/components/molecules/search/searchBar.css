@@ -2,8 +2,7 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    padding: 20px;
+    padding: 10px;
 }
 
 .searchBar-block{
@@ -18,7 +17,9 @@
 }
 
 .searchBar-block:nth-child(1){
+    margin-top: 0;
     padding: 0;
+    margin-bottom: 1vh;
 }
 
 @media (min-width: 768px){

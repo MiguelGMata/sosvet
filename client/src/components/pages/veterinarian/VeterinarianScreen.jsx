@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import CardVeterinarians from '../../molecules/card/CardVeterinarians';
 import SearchBar from '../../molecules/search/SearchBar';
 import './veterinarianScreen.css';
+import Title from '../../atoms/title/Title';
 
 
 const VeterinarianScreen = () => {
@@ -11,13 +12,12 @@ const VeterinarianScreen = () => {
         <>
             <main className="main-veterinarianScreen">
             <section className="section-veterinarianScreen">
-                <h1>GoogleMap</h1>
+                <Title>Rechercher un vétérinaire autour de vous</Title>
             </section>
             <section className="section-veterinarianScreen">
                     <SearchBar className="searchBar-block-vet"/>
             </section>
             </main>
-          
         </>
     );
 };
