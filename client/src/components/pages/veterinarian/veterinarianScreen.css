@@ -5,20 +5,18 @@
     align-items: space-around;
     padding: 20px;
     gap: 20px;
-    background-color: aqua;
 }
 
 .section-veterinarianScreen{
-    background-color: var(--white);
+    background-color: aqua;
+    width: 100%;
+}
+
+.searchBar-block-vet{
+    margin-top: 80px;
+    max-width: 100%;
 }
 
 @media (min-width: 768px){
-    .main-veterinarianScreen{
-        flex-direction: row;
-    }
-
-    .section-veterinarianScreen{
-        max-width: 50%;
-        width: 50%;
-    }
+    
 }

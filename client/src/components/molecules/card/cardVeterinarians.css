@@ -1,33 +1,75 @@
-.card-veterinarians {
-    background-color: #ffe1ef;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    padding: 20px;
-    max-width: 400px;
-    margin: 10vh auto;
-    text-align: center;
-  }
-  
-  .card-header-veterinarians {
-    margin-bottom: 20px;
-  }
-  
-  .card-body-veterinarians p {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #555;
-    text-align: left;
-  }
-  
-  .card-body-veterinarians p strong {
-    color: var(--green); 
-  }
-  
-  .card-bod-veterinarians p:first-child {
-    margin-top: 0;
-  }
+.scroll-wrapper-vet {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden; /* Asegúrate de ocultar cualquier contenido fuera del contenedor */
 
-  .title-card {
-    color: var(--green);
-  }
+}
+
+.scroll-container-vet {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Para Firefox */
+  -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+  padding: 5px;
   
+}
+
+.scroll-container-vet::-webkit-scrollbar {
+  display: none;
+}
+
+
+
+.card-veterinarians {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+  min-width: 300px; /* Ajusta el tamaño mínimo para las tarjetas */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.card-veterinarians-Image {
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.card-header-veterinarians{
+  width: 100%;
+  text-align: center;
+}
+.card-body-veterinarians{
+  width: 100%;
+  padding: 10px;
+}
+.card-body-veterinarians p strong {
+  color: var(--green); 
+}
+.scroll-button {
+  background-color: #ef5a8d;
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.scroll-button.left {
+  left: 10px; /* Ajusta la posición de los botones */
+}
+
+.scroll-button.right {
+  right: 10px; /* Ajusta la posición de los botones */
+}
+
+@media (max-width: 768px) {
+
+}

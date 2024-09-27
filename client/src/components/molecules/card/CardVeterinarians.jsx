@@ -1,23 +1,62 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import Title from '../../atoms/title/Title';
 import Image from '../../atoms/image/image';
+import gsap from 'gsap';//biblioteca para efecto de scroll animado
 import './cardVeterinarians.css';
 
-const CardVeterinarians = ({ nom, adresse, lieux, postal, phone, pictures }) => {
+const CardVeterinarians = ({ veterinarians }) => {
+  // Referencia para el contenedor de las tarjetas
+  const scrollContainerRef = useRef(null);
+
+  // Funciones para el scroll horizontal
+  const scrollLeft = () => {
+    gsap.to(scrollContainerRef.current, {
+      scrollLeft: scrollContainerRef.current.scrollLeft - 310,
+      duration: 0.5, // tiempo en segundos
+      ease: "sine.out"// suavizado
+    });
+  };
+
+  const scrollRight = () => {
+    gsap.to(scrollContainerRef.current, {
+      scrollLeft: scrollContainerRef.current.scrollLeft + 310,
+      duration: 0.5, 
+      ease: "sine.out"
+    });
+  };
+
   return (
-    <div className="card-veterinarians">
-      <Image image={pictures} width='60%' height='200px'/>
-      <div className="card-header-veterinarians">
-        <Title className="title-card">{`${nom}`}</Title>
+    <div className="scroll-wrapper-vet">
+      {/* Botones de desplazamiento */}
+      <button className="scroll-button left" onClick={scrollLeft}>
+        &lt;
+      </button>
+
+      {/* Contenedor de las tarjetas con scroll */}
+      <div className="scroll-container-vet" ref={scrollContainerRef}>
+        {veterinarians.map((vet) => (
+          <div key={vet.id} className="card-veterinarians">
+            <Image image={vet.pictures} width='100%' height='200px' className="card-veterinarians-Image "/>
+            <div className="card-header-veterinarians">
+              <Title className="title-card">{vet.nom}</Title>
+            </div>
+            <div className="card-body-veterinarians">
+              <p><strong>Adresse :</strong> {vet.adresse}</p>
+              <p><strong>Lieux :</strong> {vet.lieux}</p>
+              <p><strong>Postal :</strong> {vet.postal}</p>
+              <p><strong>Phone :</strong> {vet.phone}</p>
+            </div>
+          </div>
+        ))}
       </div>
-      <div className="card-body-veterinarians">
-        <p><strong>Adresse :</strong>{adresse}</p>
-        <p><strong>Lieux :</strong>{lieux}</p>
-        <p><strong>Postal :</strong>{postal}</p>
-        <p><strong>Phone :</strong>{phone}</p>
-      </div>
+
+      <button className="scroll-button right" onClick={scrollRight}>
+        &gt;
+      </button>
     </div>
   );
 };
 
 export default CardVeterinarians;
+
+

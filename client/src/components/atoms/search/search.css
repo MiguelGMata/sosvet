@@ -1,0 +1,19 @@
+.search-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    gap: 20px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg,#ef5a8d, #ea0654, #ef5a8d);
+}
+
+.search-bar Button{
+    max-width: 300px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+

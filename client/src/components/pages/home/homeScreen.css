@@ -2,7 +2,7 @@
     height: 100%;
 }
 
-.section-homeScreen h1{
-    height: 100%;
-    color: black;
+.section-homeScreen{
+    width: 100%;
+    padding: 10px;
 }
