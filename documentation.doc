@@ -49,3 +49,56 @@ luego ejecute npm run dev
 
 luego instale react dentro de mi projecto con el comando npx create-react-app client
 
+/sosvet                 # Carpeta raíz del proyecto
+│
+├── /client             # Carpeta del frontend (React)
+│   ├── /public         # Archivos públicos (index.html, favicon, etc.)
+│   ├── /src            # Código fuente del frontend en React
+│   │   ├── App.jsx     # Componente principal de React
+│   │   ├── index.jsx   # Punto de entrada de React
+│   │   └── ...         # Otros componentes, hooks, etc.
+│   ├── /node_modules   # Dependencias de NPM del frontend
+│   ├── package.json    # Configuración del frontend
+│   ├── vite.config.js  # Configuración de Vite
+│   └── ...             # Otros archivos relacionados con el frontend
+│
+├── /config             # Archivos de configuración (DB, servidor, etc.)
+│   └── config.js       # Configuración de la base de datos, entorno, etc.
+│
+├── /controlleurs       # Controladores de la API
+│   └── userController.js  # Ejemplo de controlador de usuarios
+│   └── ...             # Otros controladores para manejar las solicitudes API
+│
+├── /helpers            # Archivos de ayuda (utilidades, funciones comunes)
+│   └── authHelper.js   # Ejemplo de función de ayuda para autenticación
+│   └── ...             # Otras funciones de ayuda
+│
+├── /middlewares        # Middlewares para la API (autenticación, validación, etc.)
+│   └── authMiddleware.js  # Ejemplo de middleware de autenticación
+│   └── ...             # Otros middlewares
+│
+├── /models             # Modelos de base de datos
+│   └── userModel.js    # Ejemplo de modelo de usuario (ORM)
+│   └── ...             # Otros modelos
+│
+├── /routes             # Rutas de la API
+│   └── userRoutes.js   # Ejemplo de rutas relacionadas con usuarios
+│   └── ...             # Otras rutas API
+│
+├── /seeders            # Archivos para sembrar datos en la base de datos
+│   └── userSeeder.js   # Ejemplo de seeder para usuarios
+│   └── ...             # Otros seeders
+│
+├── /seeds              # Datos semilla para poblar la base de datos
+│   └── users.json      # Ejemplo de datos de usuarios
+│   └── ...             # Otros datos semilla
+│
+├── /node_modules       # Dependencias de NPM del proyecto (backend)
+├── .doc                # Documentación del proyecto
+├── .gitignore          # Ignorar archivos no necesarios en git
+├── package-lock.json   # Archivo generado por NPM para gestionar dependencias
+├── package.json        # Configuración de NPM del backend y la API
+├── Readme              # Descripción del proyecto
+├── server.js           # Punto de entrada de tu servidor backend (API)
+├── vercel.json         # Configuración para despliegue en Vercel
+└── ...                 # Otros archivos o configuraciones del proyecto
