@@ -44,31 +44,26 @@ const ProfileScreen = () => {
         <>
         <main className='main-profileScreen'>
             <section className="section-profile">
-                <div className="block-profile">
-                    <Image className="image-profile" image="https://ik.imagekit.io/logoMGM/sosvet/logo-.webp?updatedAt=1727378751576" width="200px" height="200px"/>
-                    <Title className="title-profile">Bienvenu à votre profil</Title>
-                    <CardProfile  firstName={userProfile.first_name} lastName={userProfile.last_name} email={userProfile.email}/> 
-                </div>
-                <div className="block-profile-b">
-                    { 
-                        perfilsAni.length !== 0 ? 
-                        <CardAnimal 
-                            nom={perfilsAni.nom} 
-                            espece={perfilsAni.espece}   
-                            race={perfilsAni.race} 
-                            couleur={perfilsAni.couleur}  
-                            sexe={perfilsAni.sexe} 
-                            poids={perfilsAni.poids } 
-                            sterilisation={perfilsAni.sterilisation }  
-                            date_naissance={perfilsAni.date_naissance}  
-                            information={perfilsAni.information}   
-                        />
-                        : 
-                        <Card>Il n'y a pas d'animal ajouté, cliquez sur le bouton pour en ajouter un !
-                            <Button text="Ajouter" onClick={() => navigate('/animal')}/>
-                        </Card>
-                    }
-                </div>
+                <Title className="title-profile">Bienvenu à votre profil</Title>
+                <CardProfile  firstName={userProfile.first_name} lastName={userProfile.last_name} email={userProfile.email}/> 
+                { 
+                    perfilsAni.length !== 0 ? 
+                    <CardAnimal 
+                        nom={perfilsAni.nom} 
+                        espece={perfilsAni.espece}   
+                        race={perfilsAni.race} 
+                        couleur={perfilsAni.couleur}  
+                        sexe={perfilsAni.sexe} 
+                        poids={perfilsAni.poids } 
+                        sterilisation={perfilsAni.sterilisation }  
+                        date_naissance={perfilsAni.date_naissance}  
+                        information={perfilsAni.information}   
+                    />
+                    : 
+                    <Card>Il n'y a pas d'animal ajouté, cliquez sur le bouton pour en ajouter un !
+                        <Button text="Ajouter" onClick={() => navigate('/animal')}/>
+                    </Card>
+                }
             </section>
           </main>
         </>

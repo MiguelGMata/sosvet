@@ -1,32 +1,76 @@
-.card-profile {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 400px;
-    text-align: center;
-  }
-  
-  .card-header {
-    margin-bottom: 20px;
-  }
-  
-  .card-body p {
-    margin: 10px 0;
-    font-size: 1em;
-    color: #555;
-    text-align: left;
-  }
-  
-  .card-body p strong {
-    color: var(--green); 
-  }
-  
-  .card-body p:first-child {
-    margin-top: 0;
+.card-profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+}
+
+.card-profile-card {
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card-profile-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-profile-header {
+  margin-bottom: 20px;
+}
+
+.card-profile-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--green);
+}
+
+.card-profile-name {
+  margin: 10px 0;
+  color: var(--black);
+}
+
+.card-profile-info p {
+  margin: 10px 0;
+  color: var(--black);
+}
+
+.card-profile-info strong {
+  color: var(--fuchsia);
+}
+
+@media (min-width: 768px) {
+  .card-profile-container {
+    padding: 50px;
   }
 
-  .title-card {
-    color: var(--green);
+  .card-profile-card {
+    max-width: 600px;
+    padding: 40px;
   }
-  
+
+  .card-profile-avatar {
+    width: 150px;
+    height: 150px;
+  }
+
+  .card-profile-name {
+    font-size: 2rem;
+  }
+
+  .card-profile-info p {
+    font-size: 1.2rem;
+  }
+}
+
+.card-profile-loading {
+  font-size: 1.5rem;
+  color: var(--black);
+}
