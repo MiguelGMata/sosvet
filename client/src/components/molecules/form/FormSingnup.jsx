@@ -93,7 +93,9 @@ const FormSignup = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button text="S'inscrire!" onClick={handleSignup} />
+        <div className="btn-sumit">
+          <Button text="S'inscrire !" onClick={handleSignup} />
+        </div>
       </div>
     </form>
   );
