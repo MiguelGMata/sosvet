@@ -24,9 +24,6 @@ exports.router = (function () {
   apiRouter.route('/animal/:id').delete(Animal.animalDelete);
   apiRouter.route('/animal/:id').put(Animal.animalPut);
 
-  //--------------------------Nouvelle Routes Animal------------------------
-  apiRouter.route('/animal').get(Animal.userAnimal);
-
   //--------------------------Routes Veterinaires-------------------
   apiRouter.route('/veterinaires').get(Veterinaires.veterinaires);
   apiRouter.route('/veterinaire/:id').get(Veterinaires.veterinaire);

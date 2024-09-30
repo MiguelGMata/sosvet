@@ -109,6 +109,7 @@ module.exports = {
             token: jwttoken.generateTokenForUser(token),
         });
     },
+
     profil: async (req, res) => {
         var headerAuth = req.headers['authorization']
         const decoded = jwttoken.getUserId(headerAuth);
@@ -124,11 +125,22 @@ module.exports = {
             where: {
                 id: user.id
             },
-            include: [
+         include: [
                 {
                     model: Animal,
                     as: "Animals",
-                    attributes: ["nom", "espece", "race", "sexe"],
+                    attributes: [
+                        "id",
+                        "nom",
+                        "espece",
+                        "race",
+                        "couleur",
+                        "sexe",
+                        "poids",
+                        "sterilisation",
+                        "information",
+                        "date_naissance",
+                    ],
                 },
             ],
         })
