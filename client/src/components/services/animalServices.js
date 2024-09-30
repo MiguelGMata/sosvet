@@ -49,7 +49,6 @@ export const putAnimal = async (animalId, updatedData) => {
                 'Authorization': `Bearer ${localStorage.getItem('token')}`, 
             },
         });
-        
         return response.data;
         
     } catch (error) {

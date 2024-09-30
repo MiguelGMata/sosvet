@@ -41,3 +41,9 @@
   margin-right: 15px; /* Espacio entre etiquetas */
 }
 
+.btn-sumit{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+

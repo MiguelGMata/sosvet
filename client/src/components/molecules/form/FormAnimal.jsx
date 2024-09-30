@@ -140,7 +140,7 @@ const FormAnimal = ({ animalData, onChange, onSubmit }) => {
             <Input
               type="date"
               name="date_naissance"
-              value={animalData.date_naissance}
+              value={animalData.date_naissance.slice(0, 10)} 
               onChange={onChange}
             />
           </div>
@@ -155,7 +155,9 @@ const FormAnimal = ({ animalData, onChange, onSubmit }) => {
             onChange={onChange}
           />
         </div>
-        <Button text="Ajouter votre animal" type="submit" />
+        <div className="btn-sumit">
+          <Button text="Ajouter" type="submit" />
+        </div>
       </div>
     </form>
   );
