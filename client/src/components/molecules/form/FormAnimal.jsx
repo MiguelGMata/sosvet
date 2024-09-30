@@ -7,7 +7,7 @@ import Label from '../../atoms/label/Label';
 import Select from '../../atoms/select/Select';
 import './formAnimal.css';
 
-const FormAnimal = ({ handleAnimal, animalData }) => {
+const FormAnimal = ({ animalData, onChange, onSubmit }) => {
 
 
       const speciesOptions = [
@@ -29,7 +29,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
       ]; 
       
   return (
-    <form className="form-animal" onSubmit={handleAnimal}>
+    <form className="form-animal" onSubmit={onSubmit}>
       <Title className="title-form">Animal</Title> 
       <div className="form">
 
@@ -41,7 +41,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
               name="nom"
               placeholder="Nom de votre animal"
               value={animalData.nom}
-              onChange={handleAnimal}            
+              onChange={onChange}            
             />
           </div>
           <div className="form-field">
@@ -51,7 +51,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
               name="race"
               placeholder="Race de votre animal"
               value={animalData.race}
-              onChange={handleAnimal }
+              onChange={onChange}
             />
           </div>
         </div>
@@ -63,7 +63,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
                 name="espece"
                 placeholder="Espèce de votre animal"
                 value={animalData.espece}
-                onChange={handleAnimal}
+                onChange={onChange}
                 options={speciesOptions}
             />
           </div>
@@ -73,7 +73,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
                 name="couleur"
                 placeholder="Couleur de votre animal"
                 value={animalData.couleur}
-                onChange={handleAnimal}
+                onChange={onChange}
                 options={colorOptions}
             />
           </div>
@@ -88,7 +88,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
                     name="sexe"
                     value="femele"
                     checked={animalData.sexe === 'femele'}
-                    onChange={handleAnimal}
+                    onChange={onChange}
                 />
                <Label htmlFor="couleur" text="Femelle" />
                <Input
@@ -96,7 +96,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
                     name="sexe"
                     value="male"
                     checked={animalData.sexe === 'male'}
-                    onChange={handleAnimal}
+                    onChange={onChange}
                 />
                <Label htmlFor="couleur" text="Mâle" />
             </div>
@@ -109,7 +109,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
                   name="sterilisation"
                   value="oui"
                   checked={animalData.sterilisation === 'oui'}      
-                  onChange={handleAnimal}
+                  onChange={onChange}
                 />
                <Label htmlFor="oui" text="  Oui" />
                <Input
@@ -117,7 +117,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
                     name="sterilisation"
                     value="non"
                     checked={animalData.sterilisation === 'non'}
-                    onChange={handleAnimal}
+                    onChange={onChange}
                 />
                <Label htmlFor="couleur" text="   Non" />
             </div>
@@ -132,7 +132,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
               name="poids"
               placeholder="Indiquez le poids de votre animal"
               value={animalData.poids}
-              onChange={handleAnimal}
+              onChange={onChange}
             />
           </div>         
           <div className="form-field">
@@ -141,7 +141,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
               type="date"
               name="date_naissance"
               value={animalData.date_naissance}
-              onChange={handleAnimal}
+              onChange={onChange}
             />
           </div>
         </div>
@@ -152,7 +152,7 @@ const FormAnimal = ({ handleAnimal, animalData }) => {
             name="information"
             placeholder="Ajoutez des informations sur votre animal"
             value={animalData.information}
-            onChange={handleAnimal}
+            onChange={onChange}
           />
         </div>
         <Button text="Ajouter votre animal" type="submit" />

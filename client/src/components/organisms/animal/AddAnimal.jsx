@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { addAnimal } from '../../services/animalServices';
 import Span from '../../atoms/span/Span';
-import FormAnimal from '../../molecules/form/test';
+import FormAnimal from '../../molecules/form/FormAnimal';
 import './addAnimal.css';
 
 
