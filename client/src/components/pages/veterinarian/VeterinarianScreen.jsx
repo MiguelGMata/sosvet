@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import CardVeterinarians from '../../molecules/card/CardVeterinarians';
 import SearchBar from '../../molecules/search/SearchBar';
 import './veterinarianScreen.css';
 import Title from '../../atoms/title/Title';

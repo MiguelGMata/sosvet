@@ -12,9 +12,7 @@ const CardProfile = ({ firstName, lastName, email }) => {
           <Title className="title-card">{`${firstName} ${lastName}`}</Title>
         </div>
         <div className="card-profile-info">
-          <p><strong>Prénom:</strong> {firstName}</p>
-          <p><strong>Nom:</strong> {lastName}</p>
-          <p><strong>Email:</strong> {email}</p>
+          <p>Email :<strong>{email}</strong> </p>
         </div>
       </div>
     </div>

@@ -59,7 +59,7 @@ const FormSignup = () => {
   };
 
   return (
-    <div className="login-screen">
+    <form className="login-screen">
       <Title className="title-form">Inscription</Title>
       <p>Inscrivez-vous en quelques clics</p>
       {error && <Span className="error-message">{error}</Span>} {/* Muestra el mensaje de error */}
@@ -95,7 +95,7 @@ const FormSignup = () => {
         />
         <Button text="S'inscrire!" onClick={handleSignup} />
       </div>
-    </div>
+    </form>
   );
 };
 

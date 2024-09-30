@@ -1,14 +1,13 @@
 .input {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    border: 1px solid #333;
-    border-radius: 10px;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  .input::placeholder {
-    color: #999;
-  }
-  
+  padding: 10px; 
+  border: 1px solid var(--green); 
+  border-radius: 3px; 
+  transition: border-color 0.3s; 
+  margin-bottom: 15px; 
+  width: 100%; 
+}
+
+.input:focus {
+  border-color:  var(--fuchsia);
+  outline: none;
+}

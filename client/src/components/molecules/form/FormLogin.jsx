@@ -29,7 +29,7 @@ const FormLogin = () => {
   };
 
   return (
-    <div className="login-screen">
+    <form className="login-screen" onSubmit={handleLogin}>
         <Title className="title-form">Connexion</Title>
         <p>Connectez-vous en quelques clics</p>
         {errorMessage && <Span className="error-message">{errorMessage}</Span>}
@@ -48,9 +48,9 @@ const FormLogin = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <Button text="Se connecter" onClick={handleLogin} />
+        <Button text="Se connecter"   type="submit" />
       </div>
-    </div>
+    </form>
   );
 };
 

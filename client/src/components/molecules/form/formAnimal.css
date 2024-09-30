@@ -1,0 +1,43 @@
+.form-animal {
+  background-color: #fff; /* Fondo blanco para el formulario */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px; /* Ancho máximo del formulario */
+  margin: 0 auto; /* Centra el formulario */
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Espacio entre los elementos */
+}
+
+.title-form{
+  text-align: center;
+  color: var(--green);
+  margin-bottom: 20px; 
+}
+
+.form-group-inline {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px; /* Espacio entre campos */
+}
+
+.form-field {
+  flex: 1; /* Permitir que cada campo ocupe el mismo espacio */
+  margin-right: 10px; /* Espacio entre campos */
+}
+
+.form-field:last-child {
+  margin-right: 0; /* Sin margen en el último campo */
+}
+
+.radio-group {
+  display: flex;
+  justify-content: space-around; /* Espacio entre los botones */
+  margin-top: 5px; /* Espacio arriba de la agrupación */
+}
+
+.radio-group label {
+  margin-right: 15px; /* Espacio entre etiquetas */
+}
+

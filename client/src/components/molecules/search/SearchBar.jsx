@@ -1,5 +1,5 @@
 import React,{ useState, useEffect } from 'react';
-import { veterinarianGet } from '../../services/useServices';
+import { veterinarianGet } from '../../services/veterinarianServices';
 import Search from '../../atoms/search/search';
 import CardVeterinarians from '../card/CardVeterinarians';
 import GoogleMap from '../map/GoogleMap';
