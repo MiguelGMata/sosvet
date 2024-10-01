@@ -49,20 +49,12 @@ module.exports = {
         await models.Soin.findOne({
             where: {
                 id: req.params.id
-            }/*,
-            include: [
-                {
-                    model: User,
-                    as: "user",
-                    attributes: ["id", "first_name", "last_name"],
-                },
-            ],*/
-        })
+            }})
             .then(soin => {
                 if (soin) {
                     res.json(soin)
                 } else {
-                    res.send("L'soin n'existe pas")
+                    res.send("Aucun soin ajouté")
                 }
             })
             .catch(err => {

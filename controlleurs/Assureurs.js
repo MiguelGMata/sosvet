@@ -68,7 +68,7 @@ module.exports = {
                 if (assureur) {
                     res.json(assureur)
                 } else {
-                    res.send("L'assureur n'existe pas")
+                    res.send("Aucune assurance ajouter")
                 }
             })
             .catch(err => {
