@@ -60,33 +60,33 @@ const FormSignup = () => {
 
   return (
     <form className="login-screen">
-      <Title className="title-form">Inscription</Title>
+      <Title className="title-bi">Inscription</Title>
       <p>Inscrivez-vous en quelques clics</p>
       {error && <Span className="error-message">{error}</Span>} {/* Muestra el mensaje de error */}
       {showModal && <MessageModal message={successMessage} onClose={closeModal} />}
       <div className="form">
-        <Label htmlFor="firstName" text="Prénom" />
+        <Label  className="label-primary" hhtmlFor="firstName" text="Prénom" />
         <Input
           type="text"
           placeholder="Indiquez votre prénom"
           value={firstName}
           onChange={(e) => setFirstName(e.target.value)}
         />
-        <Label htmlFor="lastName" text="Nom" />
+        <Label  className="label-primary" hhtmlFor="lastName" text="Nom" />
         <Input
           type="text"
           placeholder="Indiquez votre nom"
           value={lastName}
           onChange={(e) => setLastName(e.target.value)}
         />
-        <Label htmlFor="email" text="Email" />
+        <Label  className="label-primary" hhtmlFor="email" text="Email" />
         <Input
           type="email"
           placeholder="Indiquez votre email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Label htmlFor="password" text="Mot de passe" />
+        <Label  className="label-primary" hhtmlFor="password" text="Mot de passe" />
         <Input
           type="password"
           placeholder="Indiquez votre mot de passe"

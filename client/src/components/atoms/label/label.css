@@ -3,10 +3,17 @@
     margin-bottom: 5px;
     color: var(--green);
   }
+
+  .label-primary {
+    color: var(--white);
+  }
   
   @media (min-width: 768px) {
     .label {
       font-size: 16px;
+    }
+    .label-primary {
+      color: var(--green);
     }
   }
   

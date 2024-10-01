@@ -4,9 +4,28 @@
     font-size: 1.5rem
 }
 
+
+.title-primary {
+    font-size: 1.5rem;
+    color: var(--fuchsia);
+    text-align: center;
+}
+
+.title-secondary {
+    font-size: 1rem;
+    color: var(--green);
+    text-align: center;
+}
+
+      
+.title-bi {
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
 .title-form {
     font-size: 24px;
-    color: #fff;
+    color: var(--white);
     text-align: center;
     margin: 20px;
   }
@@ -16,8 +35,14 @@
     .title-header{
         font-size: 3rem
     }
+
+    .title-bi {
+        font-size: 2rem;
+        color: var(--green);
+    }
+
     .title-form {
-        color: #333;
+        color: var(--black);
         margin: 60px;
     }
 }

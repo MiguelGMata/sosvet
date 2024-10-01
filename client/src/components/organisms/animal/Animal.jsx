@@ -10,10 +10,11 @@ import ButtonIcon from '../../atoms/button/IconButton';
 import Card from '../../atoms/card/Card';
 import Modal from '../../atoms/modal/Modal';
 import FormAnimal from '../../molecules/form/FormAnimal';
+import Care from './Care';
 import moment from 'moment';
 import 'moment/locale/fr'; 
-
 import './animal.css';
+import Insurance from './Insurance';
 
 const Animal = () => {
     const [userProfile, setUserProfile] = useState(null);
@@ -35,21 +36,6 @@ const Animal = () => {
     const [isEditing, setIsEditing] = useState(false); // Estado para saber si estamos editando
     const [currentAnimalId, setCurrentAnimalId] = useState(null); // Guardar el ID del animal que estamos editando
     const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchProfile = async () => {
-            try {
-                const data = await profileUser();
-                setUserProfile(data);
-                setPerfilsAni(data.Animals);
-            } catch (error) {
-                setErrorMessage(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchProfile();
-    }, []);
 
     const handleAnimalAdded = async (newAnimalData) => {
         try {
@@ -123,7 +109,7 @@ const Animal = () => {
         setCurrentAnimalId(null);
     };
 
-    const handleAnimalSubmit = (event) => {
+     const handleAnimalSubmit = (event) => {
         event.preventDefault();
         if (isEditing) {
             // Editar el animal existente
@@ -142,6 +128,22 @@ const Animal = () => {
     const formatDate = (isoString) => {
         return moment(isoString).locale('fr').format('DD/MM/YYYY');
     };
+
+    useEffect(() => {
+        const fetchProfile = async () => {
+            try {
+                const data = await profileUser();
+                setUserProfile(data);
+                setPerfilsAni(data.Animals);
+            } catch (error) {
+                setErrorMessage(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchProfile();
+    }, []);
+
     
     if (loading) {
         return <div>Chargement en cours...</div>;
@@ -154,7 +156,6 @@ const Animal = () => {
     return (
         <section className="card-profile-animal">
             <Title className="title-animal">Vos animaux de compagnie {userProfile.first_name}</Title>
-        
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                     {error && <Span className="error-message">{error}</Span>}
                 <FormAnimal
@@ -167,8 +168,8 @@ const Animal = () => {
                 {perfilsAni.length > 0 ? (
                     perfilsAni.map((animal, index) => (
                         animal && (
-                            <Card key={`${animal.id}-${index}`}>
-                                <Title>{animal.nom}</Title>
+                            <Card key={`${animal.id}-${index}`} className="profile-animal-card">
+                                <Title className="title-form">{animal.nom}</Title>
                                 <ul className="profile-animal-ul">
                                     <li>Espèce : {animal.espece}</li>
                                     <li>Race : {animal.race}</li>
@@ -182,6 +183,10 @@ const Animal = () => {
                                 <div className="btn-animal-crud">
                                     <ButtonIcon onClick={() => handleOpenEditModal(animal)}><FaEdit /></ButtonIcon>
                                     <ButtonIcon onClick={() => handleDeleteAnimal(animal.id)}><FaTrashAlt /></ButtonIcon>
+                                </div>
+                                <div  className="card-animal-soin">
+                                    <Care animalId={animal.id}/>
+                                    <Insurance animalId={animal.id}/>
                                 </div>
                             </Card>
                         )
@@ -200,4 +205,3 @@ const Animal = () => {
 };
 
 export default Animal;
-

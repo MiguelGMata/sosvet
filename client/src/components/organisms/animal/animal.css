@@ -24,6 +24,32 @@
     padding: 20px;
 }
 
+.profile-animal-card{
+    background-color: var(--fuchsia);
+}
+
+.card-animal-soin{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.animal-ul{
+    list-style: none;
+    text-align: left;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid var(--grey);
+    background-color: var(--green);
+}
+.animal-ul li {
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(255, 255, 255);
+  
+}
+
 @media (min-width: 768px){
     .card-profile-animal-block{
         flex-direction: row;

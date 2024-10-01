@@ -29,6 +29,10 @@
     background-color: rgb(255, 255, 255);
   
 }
+
+.profile-animal-btn button{
+    margin: 5px;
+}
 @media (min-width: 768px){
     .section-profile{
         padding-top: 100px;

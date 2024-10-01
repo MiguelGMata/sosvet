@@ -30,18 +30,18 @@ const FormLogin = () => {
 
   return (
     <form className="login-screen" onSubmit={handleLogin}>
-        <Title className="title-form">Connexion</Title>
+        <Title className="title-bi">Connexion</Title>
         <p>Connectez-vous en quelques clics</p>
         {errorMessage && <Span className="error-message">{errorMessage}</Span>}
       <div className="form">
-        <Label htmlFor="email" text="Email" />
+        <Label className="label-primary" htmlFor="email" text="Email" />
         <Input
           type="email"
           placeholder="Indiquez votre email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <Label htmlFor="password" text="Mot de passe" />
+        <Label  className="label-primary" hhtmlFor="password" text="Mot de passe" />
         <Input
           type="password"
           placeholder="Indiquez votre mot de passe"
