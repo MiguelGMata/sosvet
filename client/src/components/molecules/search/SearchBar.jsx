@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from 'react';
 import { veterinarianGet } from '../../services/veterinarianServices';
-import Search from '../../atoms/search/search';
+import Search from '../../atoms/search/Search';
 import CardVeterinarians from '../card/CardVeterinarians';
 import GoogleMap from '../map/GoogleMap';
 import './searchBar.css';
