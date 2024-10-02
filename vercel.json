@@ -6,6 +6,6 @@
   ],
   "routes": [
     { "src": "/sos/(.*)", "dest": "/server/$1" },
-    { "src": "/(.*)", "dest": "/client/index.html" } 
+    { "src": "/(.*)", "dest": "/client/build/$1" } 
   ]
 }
