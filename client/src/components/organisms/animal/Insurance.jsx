@@ -128,7 +128,7 @@ const Insurance = ( { animalId }) => {
             )}
    
             <ButtonIcon onClick={handleOpenModal} disabled={loading}>
-                {loading ? 'Cargando...' : <FaAmbulance />}
+                {loading ? 'Cargando...' : <FaAmbulance />} {insurance.length}
             </ButtonIcon>
         </Card>
     );

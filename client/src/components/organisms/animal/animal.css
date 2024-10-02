@@ -49,6 +49,9 @@
     background-color: rgb(255, 255, 255);
   
 }
+.title-profil-animal{
+    color: var(--white);
+}
 
 @media (min-width: 768px){
     .card-profile-animal-block{

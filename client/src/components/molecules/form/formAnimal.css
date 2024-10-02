@@ -10,11 +10,6 @@
   gap: 15px; /* Espacio entre los elementos */
 }
 
-.title-form{
-  text-align: center;
-  color: var(--green);
-  margin-bottom: 20px; 
-}
 
 .form-group-inline {
   display: flex;

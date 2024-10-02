@@ -1,7 +1,7 @@
 import React from 'react';
 import './input.css';
 
-const Input = ({ type, placeholder, value, onChange, checked, name }) => {
+const Input = ({ type, placeholder, value, onChange, checked, name, className }) => {
   return (
     <input
       type={type}
@@ -10,7 +10,7 @@ const Input = ({ type, placeholder, value, onChange, checked, name }) => {
       value={value}
       onChange={onChange}
       checked={checked} 
-      className="input"
+      className={`input ${className}`}
     />
   );
 };

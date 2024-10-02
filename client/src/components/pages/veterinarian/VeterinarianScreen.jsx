@@ -11,7 +11,7 @@ const VeterinarianScreen = () => {
         <>
             <main className="main-veterinarianScreen">
             <section className="section-veterinarianScreen">
-                <Title>Rechercher un vétérinaire autour de vous</Title>
+                <Title>Rechercher un vétérinaire</Title>
             </section>
             <section className="section-veterinarianScreen">
                     <SearchBar className="searchBar-block-vet"/>

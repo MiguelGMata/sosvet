@@ -132,11 +132,11 @@ const Care = ( { animalId }) => {
          
                 ))
             ) : (
-                <Span>Aucun soin <FaRegFrownOpen /></Span>
+                <Span>Aucun soin <FaRegFrownOpen /> {careSoin.length}</Span>
             )}
    
             <ButtonIcon onClick={handleOpenModal} disabled={loading}>
-                {loading ? 'Cargando...' : <FaHeartbeat />}
+                {loading ? 'Cargando...' : <FaHeartbeat /> } {careSoin.length}
             </ButtonIcon>
         </Card>
     );

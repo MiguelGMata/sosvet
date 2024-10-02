@@ -11,3 +11,9 @@
   border-color:  var(--fuchsia);
   outline: none;
 }
+
+.input-search{
+  margin: 5px;
+  padding: 15px;
+  border-radius: 50px;
+}

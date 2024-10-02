@@ -169,7 +169,7 @@ const Animal = () => {
                     perfilsAni.map((animal, index) => (
                         animal && (
                             <Card key={`${animal.id}-${index}`} className="profile-animal-card">
-                                <Title className="title-form">{animal.nom}</Title>
+                                <Title className="title-profil-animal">{animal.nom}</Title>
                                 <ul className="profile-animal-ul">
                                     <li>Espèce : {animal.espece}</li>
                                     <li>Race : {animal.race}</li>

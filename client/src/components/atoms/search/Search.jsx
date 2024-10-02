@@ -8,10 +8,10 @@ const Search = ({handleSearch, search, onChange}) => {
         <form className="search-bar" onSubmit={handleSearch}>
             <Input 
                     type="text"
-                    placeholder="Rechercher par ville ou clinique"
+                    placeholder="Rechercher"
                     value={search}
                     onChange={onChange}
-                    className="input"
+                    className="input-search"
             />
             <Button type="submit" text="Rechercher"/>
         </form>
