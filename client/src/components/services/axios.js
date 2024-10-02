@@ -1,11 +1,11 @@
 import axios from 'axios';
 
-const apiClient = axios.create({
+const axiosInstance = axios.create({
   baseURL: 'http://localhost:4000',
   headers: {
     'Content-Type': 'application/json'
   }
-})
+});
   
 // Interceptor para añadir el token a las solicitudes si existe
 axiosInstance.interceptors.request.use((config) => {
