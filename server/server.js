@@ -18,8 +18,17 @@ app.use(logger('tiny'));
 //body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-//cors
-app.use(cors())
+const corsOptions = {
+    origin: [
+        'http://localhost:8080', // Permitir el frontend en localhost
+        'https://sosvet.vercel.app/' // Permitir el frontend en producción
+    ],
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Métodos permitidos
+    credentials: true // Si necesitas manejar credenciales (opcional)
+};
+
+// Usa la configuración de CORS
+app.use(cors(corsOptions));
 app.use(
     bodyParser.urlencoded({
         extended: false
