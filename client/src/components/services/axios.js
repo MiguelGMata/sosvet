@@ -1,12 +1,11 @@
 import axios from 'axios';
 
-const axiosInstance = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? 'https://sosvet.vercel.app' : 'http://localhost:4000',
-    timeout: 5000,
-    headers: {
-        'Content-Type': 'application/json',
-    }
-});
+const apiClient = axios.create({
+  baseURL: 'http://localhost:4000',
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
   
 // Interceptor para añadir el token a las solicitudes si existe
 axiosInstance.interceptors.request.use((config) => {
