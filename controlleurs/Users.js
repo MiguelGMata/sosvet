@@ -60,7 +60,7 @@ module.exports = {
                         userData.password = hash
                         models.User.create(userData)
                             .then(user => {
-                                res.json({ status: user.email + ' Inscrit!, vous pouvez vous connecter maintenant !' })
+                                res.json({ status: user.email + ' Inscrit!' })
                             })
                             .catch(err => {
                                 res.send('Erreur : ' + err)
@@ -109,7 +109,6 @@ module.exports = {
             token: jwttoken.generateTokenForUser(token),
         });
     },
-
     profil: async (req, res) => {
         var headerAuth = req.headers['authorization']
         const decoded = jwttoken.getUserId(headerAuth);
