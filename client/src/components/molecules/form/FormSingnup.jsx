@@ -47,7 +47,11 @@ const FormSignup = () => {
         setError(err.message); // Establece el mensaje de error devuelto por `signupUser`
       }
   };
-
+  const handleSubmit = async (event) => {
+    event.preventDefault(); // Previene que el formulario recargue la página
+    await handleSignup();
+  };
+  
   const closeModal = () => {
     setShowModal(false);
     // Si el registro fue exitoso, espera un poco antes de redirigir
@@ -59,10 +63,10 @@ const FormSignup = () => {
   };
 
   return (
-    <form className="login-screen">
+    <form className="login-screen" onSubmit={handleSubmit}>
       <Title className="title-bi">Inscription</Title>
       <p>Inscrivez-vous en quelques clics</p>
-      {error && <Span className="error-message">{error}</Span>} {/* Muestra el mensaje de error */}
+      {error && <Span className="span-login">{error}</Span>} {/* Muestra el mensaje de error */}
       {showModal && <MessageModal message={successMessage} onClose={closeModal} />}
       <div className="form">
         <Label  className="label-primary" hhtmlFor="firstName" text="Prénom" />
@@ -94,7 +98,7 @@ const FormSignup = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <div className="btn-sumit">
-          <Button text="S'inscrire !" onClick={handleSignup} />
+          <Button className="btn-login" text="S'inscrire !" type="submit"/>
         </div>
       </div>
     </form>

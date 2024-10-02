@@ -19,7 +19,10 @@
     max-width: 400px;
     margin: 0 auto;
   }
-  
+  .btn-login{
+    width: 100%;
+    max-width: 100%;
+  }
   @media (min-width: 768px) {
     .login-screen {
       min-width: 30vw;

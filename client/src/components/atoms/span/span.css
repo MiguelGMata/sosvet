@@ -1,5 +1,17 @@
 .span{
-    color: red;
-    align-items: center;
+    color: var(--red);
+    text-align: center;
     padding:  5px;
+}
+
+.span-login{
+    color: var(--yellow);
+    padding:  5px;
+}
+
+@media(min-width:768px){
+    .span-login{
+        color: var(--red);
+    }
+    
 }

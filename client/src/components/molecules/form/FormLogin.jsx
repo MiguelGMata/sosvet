@@ -49,7 +49,7 @@ const FormLogin = () => {
           onChange={(e) => setPassword(e.target.value)}
         />
           <div className="btn-sumit">
-            <Button text="Se connecter"   type="submit" />
+            <Button className="btn-login" text="Se connecter"   type="submit" />
           </div>
       </div>
     </form>
