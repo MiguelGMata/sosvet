@@ -15,9 +15,7 @@ app.use(helmet());
 //Morgan
 app.use(logger('tiny'));
 
-//body parser
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+
 const corsOptions = {
     origin: [
         'http://localhost:8080', // Permitir el frontend en localhost
@@ -29,11 +27,9 @@ const corsOptions = {
 
 // Usa la configuración de CORS
 app.use(cors(corsOptions));
-app.use(
-    bodyParser.urlencoded({
-        extended: false
-    })
-)
+//body parser
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //configure routes
 app.get('/', function (request, response) {
