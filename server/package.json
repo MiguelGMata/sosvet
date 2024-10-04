@@ -1,8 +1,0 @@
-{
-  "devDependencies": {
-    "nodemon": "^3.1.7"
-  },
-  "dependencies": {
-    "morgan": "^1.10.0"
-  }
-}
