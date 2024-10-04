@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "sequelize": "sequelize",
+    "migrate": "sequelize db:migrate"
   },
   "repository": {
     "type": "git",
