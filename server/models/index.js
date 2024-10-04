@@ -9,9 +9,15 @@ const config = require(__dirname + '/../config/config.json')[env];
 const db = {};
 
 let sequelize;
-if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+
+if (env === 'production') {
+  // Usa la variable de entorno JAWSDB_URL si estás en producción
+  sequelize = new Sequelize(process.env.JAWSDB_URL, {
+    dialect: 'mysql', // Asegúrate de que sea el dialecto correcto
+    protocol: 'mysql',
+  });
 } else {
+  // Usar la configuración del archivo config.json en desarrollo
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
 
