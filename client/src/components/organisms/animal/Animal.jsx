@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'; 
+import React, { useEffect, useState } from 'react';
 import { profileUser } from '../../services/useServices';
 import { addAnimal, putAnimal, deleteAnimal } from '../../services/animalServices';
 import { FaTrashAlt, FaEdit } from 'react-icons/fa';
@@ -11,10 +11,12 @@ import Card from '../../atoms/card/Card';
 import Modal from '../../atoms/modal/Modal';
 import FormAnimal from '../../molecules/form/FormAnimal';
 import Care from './Care';
-import moment from 'moment';
-import 'moment/locale/fr'; 
-import './animal.css';
 import Insurance from './Insurance';
+import MessageModal from '../../atoms/modal/MessageModal';
+import moment from 'moment';
+import 'moment/locale/fr';
+import './animal.css';
+
 
 const Animal = () => {
     const [userProfile, setUserProfile] = useState(null);
@@ -49,11 +51,11 @@ const Animal = () => {
 
     const handleEditAnimal = async (animalId, updatedData) => {
         try {
-            const response = await putAnimal(animalId, updatedData);    
+            const response = await putAnimal(animalId, updatedData);
             if (response.success) {
                 // Actualiza el estado perfilsAni
-                setPerfilsAni((prevAnimals) => 
-                    prevAnimals.map(animal => 
+                setPerfilsAni((prevAnimals) =>
+                    prevAnimals.map(animal =>
                         animal.id === animalId ? { ...animal, ...updatedData } : animal
                     )
                 );
@@ -65,7 +67,7 @@ const Animal = () => {
             setError(error.message);
         }
     };
-    
+
 
 
     const handleDeleteAnimal = async (animalId) => {
@@ -109,7 +111,7 @@ const Animal = () => {
         setCurrentAnimalId(null);
     };
 
-     const handleAnimalSubmit = (event) => {
+    const handleAnimalSubmit = (event) => {
         event.preventDefault();
         if (isEditing) {
             // Editar el animal existente
@@ -129,6 +131,10 @@ const Animal = () => {
         return moment(isoString).locale('fr').format('DD/MM/YYYY');
     };
 
+    const closeModal = () => {
+        setError(null);
+    };
+
     useEffect(() => {
         const fetchProfile = async () => {
             try {
@@ -144,7 +150,7 @@ const Animal = () => {
         fetchProfile();
     }, []);
 
-    
+
     if (loading) {
         return <div>Chargement en cours...</div>;
     }
@@ -156,15 +162,15 @@ const Animal = () => {
     return (
         <section className="card-profile-animal">
             <Title className="title-animal">Vos animaux de compagnie {userProfile.first_name}</Title>
+            {error && <MessageModal message={error} onClose={closeModal} className="error" />}
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-                    {error && <Span className="error-message">{error}</Span>}
                 <FormAnimal
                     animalData={animalData}
                     onChange={handleAnimalChange}
                     onSubmit={handleAnimalSubmit}
                 />
             </Modal>
-                <div className="card-profile-animal-block">
+            <div className="card-profile-animal-block">
                 {perfilsAni.length > 0 ? (
                     perfilsAni.map((animal, index) => (
                         animal && (
@@ -184,9 +190,9 @@ const Animal = () => {
                                     <ButtonIcon onClick={() => handleOpenEditModal(animal)}><FaEdit /></ButtonIcon>
                                     <ButtonIcon onClick={() => handleDeleteAnimal(animal.id)}><FaTrashAlt /></ButtonIcon>
                                 </div>
-                                <div  className="card-animal-soin">
-                                    <Care animalId={animal.id}/>
-                                    <Insurance animalId={animal.id}/>
+                                <div className="card-animal-soin">
+                                    <Care animalId={animal.id} />
+                                    <Insurance animalId={animal.id} />
                                 </div>
                             </Card>
                         )

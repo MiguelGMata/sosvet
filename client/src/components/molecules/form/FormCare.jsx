@@ -7,11 +7,11 @@ import Button from '../../atoms/button/Button';
 import './formAnimal.css';
 
 
-const FormCare = ({careData, handleChange, handleSubmit}) =>{
- 
-    return(
+const FormCare = ({ careData, handleChange, handleSubmit }) => {
+
+    return (
         <form className="form-animal" onSubmit={handleSubmit}>
-            <Title className="title-form">Soin de votre Animal</Title> 
+            <Title className="title-form">Soin de votre Animal</Title>
             <div className="form">
                 <div className="form-group-inline">
                     <div className="form-field">
@@ -21,10 +21,12 @@ const FormCare = ({careData, handleChange, handleSubmit}) =>{
                             name="categorie"
                             placeholder="Catégorie de soin"
                             value={careData.categorie}
-                            onChange={handleChange}          
+                            onChange={handleChange}
+                            required
                         />
                     </div>
-                    
+                </div>
+                <div className="form-group-inline">
                     <div className="form-field">
                         <Label htmlFor="libelle" text="Libellé" />
                         <Input
@@ -44,7 +46,7 @@ const FormCare = ({careData, handleChange, handleSubmit}) =>{
                             value={careData.date}
                             onChange={handleChange}
                         />
-                    </div> 
+                    </div>
                 </div>
                 <div className="form-group-inline">
                     <div className="form-field">
@@ -57,7 +59,7 @@ const FormCare = ({careData, handleChange, handleSubmit}) =>{
                             onChange={handleChange}
                         />
                     </div>
-                </div> 
+                </div>
                 <div className="btn-sumit">
                     <Button text="Ajouter" type="submit" />
                 </div>

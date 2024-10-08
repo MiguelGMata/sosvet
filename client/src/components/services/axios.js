@@ -7,15 +7,6 @@ const axiosInstance = axios.create({
   }
 });
 
-export const veteGet = async () => {
-  const response = await axiosInstance.get('/sos/veterinaires');
-  console.log(response.data, '<<--')
-  return response.data;
-
-}
-
-veteGet()
-
 // Interceptor para añadir el token a las solicitudes si existe
 axiosInstance.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
@@ -29,11 +20,11 @@ axiosInstance.interceptors.request.use((config) => {
 
 axiosInstance.interceptors.response.use(
   (response) => {
-    console.log('Interceptor de respuesta:', response);
+    /* console.log('Interceptor de respuesta:', response);*/
     return response;
   },
   (error) => {
-    console.error('Error en el interceptor:', error);
+    /* console.error('Error en el interceptor:', error);*/
     return Promise.reject(error);
   }
 );

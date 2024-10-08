@@ -10,27 +10,27 @@ import './formAnimal.css';
 const FormAnimal = ({ animalData, onChange, onSubmit }) => {
 
 
-      const speciesOptions = [
-        { value: 'chien', label: 'Chien' },
-        { value: 'chat', label: 'Chat' },
-        { value: 'lapin', label: 'Lapin' },
-        { value: 'Cheval', label: 'Cheval' },
-        { value: 'oiseau', label: 'Oiseau' },
-        { value: 'autre', label: 'Autre' },
-      ];
+  const speciesOptions = [
+    { value: 'chien', label: 'Chien' },
+    { value: 'chat', label: 'Chat' },
+    { value: 'lapin', label: 'Lapin' },
+    { value: 'Cheval', label: 'Cheval' },
+    { value: 'oiseau', label: 'Oiseau' },
+    { value: 'autre', label: 'Autre' },
+  ];
 
-      const colorOptions = [
-        { value: 'blanc', label: 'Blanc' },
-        { value: 'noir', label: 'Noir' },
-        { value: 'marron', label: 'Marrón' },
-        { value: 'gris', label: 'Gris' },
-        { value: 'metisse', label: 'Métisse' },
-        { value: 'autre', label: 'Autre' },
-      ]; 
-      
+  const colorOptions = [
+    { value: 'blanc', label: 'Blanc' },
+    { value: 'noir', label: 'Noir' },
+    { value: 'marron', label: 'Marrón' },
+    { value: 'gris', label: 'Gris' },
+    { value: 'pluricolore ', label: 'Pluricolore' },
+    { value: 'autre', label: 'Autre' },
+  ];
+
   return (
     <form className="form-animal" onSubmit={onSubmit}>
-      <Title className="title-form">Animal</Title> 
+      <Title className="title-form">Animal</Title>
       <div className="form">
 
         <div className="form-group-inline">
@@ -41,7 +41,7 @@ const FormAnimal = ({ animalData, onChange, onSubmit }) => {
               name="nom"
               placeholder="Nom de votre animal"
               value={animalData.nom}
-              onChange={onChange}            
+              onChange={onChange}
             />
           </div>
           <div className="form-field">
@@ -57,24 +57,24 @@ const FormAnimal = ({ animalData, onChange, onSubmit }) => {
         </div>
 
         <div className="form-group-inline">
-            <div className="form-field">
+          <div className="form-field">
             <Label htmlFor="espece" text="Espèce" />
             <Select
-                name="espece"
-                placeholder="Espèce de votre animal"
-                value={animalData.espece}
-                onChange={onChange}
-                options={speciesOptions}
+              name="espece"
+              placeholder="Espèce de votre animal"
+              value={animalData.espece}
+              onChange={onChange}
+              options={speciesOptions}
             />
           </div>
           <div className="form-field">
             <Label htmlFor="couleur" text="Couleur" />
-             <Select
-                name="couleur"
-                placeholder="Couleur de votre animal"
-                value={animalData.couleur}
-                onChange={onChange}
-                options={colorOptions}
+            <Select
+              name="couleur"
+              placeholder="Couleur de votre animal"
+              value={animalData.couleur}
+              onChange={onChange}
+              options={colorOptions}
             />
           </div>
 
@@ -83,49 +83,49 @@ const FormAnimal = ({ animalData, onChange, onSubmit }) => {
           <div className="form-field">
             <Label text="Sexe" />
             <div className="radio-group">
-                <Input
-                    type="radio"
-                    name="sexe"
-                    value="femele"
-                    checked={animalData.sexe === 'femele'}
-                    onChange={onChange}
-                />
-               <Label htmlFor="couleur" text="Femelle" />
-               <Input
-                    type="radio"
-                    name="sexe"
-                    value="male"
-                    checked={animalData.sexe === 'male'}
-                    onChange={onChange}
-                />
-               <Label htmlFor="couleur" text="Mâle" />
+              <Input
+                type="radio"
+                name="sexe"
+                value="femele"
+                checked={animalData.sexe === 'femele'}
+                onChange={onChange}
+              />
+              <Label htmlFor="couleur" text="Femelle" />
+              <Input
+                type="radio"
+                name="sexe"
+                value="male"
+                checked={animalData.sexe === 'male'}
+                onChange={onChange}
+              />
+              <Label htmlFor="couleur" text="Mâle" />
             </div>
           </div>
           <div className="form-field">
             <Label text="Stérilisation" />
             <div className="radio-group">
-                <Input
-                  type="radio"
-                  name="sterilisation"
-                  value="oui"
-                  checked={animalData.sterilisation === 'oui'}      
-                  onChange={onChange}
-                />
-               <Label htmlFor="oui" text="  Oui" />
-               <Input
-                    type="radio"
-                    name="sterilisation"
-                    value="non"
-                    checked={animalData.sterilisation === 'non'}
-                    onChange={onChange}
-                />
-               <Label htmlFor="couleur" text="   Non" />
+              <Input
+                type="radio"
+                name="sterilisation"
+                value="oui"
+                checked={animalData.sterilisation === 'oui'}
+                onChange={onChange}
+              />
+              <Label htmlFor="oui" text="  Oui" />
+              <Input
+                type="radio"
+                name="sterilisation"
+                value="non"
+                checked={animalData.sterilisation === 'non'}
+                onChange={onChange}
+              />
+              <Label htmlFor="couleur" text="   Non" />
             </div>
           </div>
         </div>
 
         <div className="form-group-inline">
-        <div className="form-field">
+          <div className="form-field">
             <Label htmlFor="poids" text="Poids" />
             <Input
               type="text"
@@ -134,13 +134,13 @@ const FormAnimal = ({ animalData, onChange, onSubmit }) => {
               value={animalData.poids}
               onChange={onChange}
             />
-          </div>         
+          </div>
           <div className="form-field">
             <Label htmlFor="date_naissance" text="Date de naissance" />
             <Input
               type="date"
               name="date_naissance"
-              value={animalData.date_naissance.slice(0, 10)} 
+              value={animalData.date_naissance.slice(0, 10)}
               onChange={onChange}
             />
           </div>

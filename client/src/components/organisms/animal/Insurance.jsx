@@ -1,14 +1,15 @@
-import React, { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react';
 import { FaAmbulance, FaRegFrownOpen, FaTrashAlt } from 'react-icons/fa';
-import { addInsurance, getInsurance, deleteInsurance } from '../../services/animalServices'; 
+import { addInsurance, getInsurance, deleteInsurance } from '../../services/animalServices';
 import Title from '../../atoms/title/Title';
 import Span from '../../atoms/span/Span';
 import ButtonIcon from '../../atoms/button/IconButton';
 import FormInsurance from '../../molecules/form/FormInsurance';
 import Modal from '../../atoms/modal/Modal';
 import Card from '../../atoms/card/Card';
+import MessageModal from '../../atoms/modal/MessageModal';
 
-const Insurance = ( { animalId }) => {
+const Insurance = ({ animalId }) => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [insurance, setInsurance] = useState([]);
     const [insuranceData, setInsuranceData] = useState({
@@ -16,7 +17,7 @@ const Insurance = ( { animalId }) => {
         nomContrat: '',
         nomAssureur: '',
         emailAssureur: '',
-        numeroContrat: '', 
+        numeroContrat: '',
         telephone: '',
     });
     const [error, setError] = useState(null);
@@ -27,7 +28,7 @@ const Insurance = ( { animalId }) => {
     };
 
     const handleCloseModal = () => {
-        setIsModalOpen(false); 
+        setIsModalOpen(false);
     };
 
     const handleFormChange = (e) => {
@@ -59,12 +60,12 @@ const Insurance = ( { animalId }) => {
             return;
         }
 
-    handleInsuranceAdd(insuranceData)
+        handleInsuranceAdd(insuranceData)
         setInsuranceData({
             nomContrat: '',
             nomAssureur: '',
             emailAssureur: '',
-            numeroContrat: '', 
+            numeroContrat: '',
             telephone: '',
         });
         handleCloseModal();
@@ -77,10 +78,13 @@ const Insurance = ( { animalId }) => {
             setInsurance(insurance.filter((insu) => insu.id !== id));
             setError(null); // Limpia cualquier error
         } catch (error) {
-            setError(error.message);     
+            setError(error.message);
         }
     };
-    
+
+    const closeModal = () => {
+        setError(null);
+    };
 
     useEffect(() => {
         const fetchInsurance = async () => {
@@ -92,23 +96,23 @@ const Insurance = ( { animalId }) => {
                 setError(error.message);
             }
         };
-            fetchInsurance();
-      
-    }, []);   
+        fetchInsurance();
+
+    }, []);
 
     return (
         <Card>
             <Title className="title-secondary">Assureur</Title>
-            
+
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-                <FormInsurance 
-                    insuranceData={insuranceData} 
-                    handleChange={handleFormChange} 
+                <FormInsurance
+                    insuranceData={insuranceData}
+                    handleChange={handleFormChange}
                     handleSubmit={handleFormSubmit}
                 />
             </Modal>
 
-            {error && <Span className="error">{error}</Span>}
+            {error && <MessageModal message={error} onClose={closeModal} className="error" />}
 
             {insurance.length > 0 ? (
                 insurance.map((insu, index) => (
@@ -126,7 +130,7 @@ const Insurance = ( { animalId }) => {
             ) : (
                 <Span>Aucun assureur <FaRegFrownOpen /></Span>
             )}
-   
+
             <ButtonIcon onClick={handleOpenModal} disabled={loading}>
                 {loading ? 'Cargando...' : <FaAmbulance />} {insurance.length}
             </ButtonIcon>
