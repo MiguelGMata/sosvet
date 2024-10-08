@@ -12,6 +12,7 @@ import MessageModal from '../../atoms/modal/MessageModal';
 import 'moment/locale/fr';
 
 const Care = ({ animalId }) => {
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [careSoin, setCareSoin] = useState([]);
     const [careData, setCareData] = useState({

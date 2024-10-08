@@ -10,6 +10,7 @@ import Card from '../../atoms/card/Card';
 import MessageModal from '../../atoms/modal/MessageModal';
 
 const Insurance = ({ animalId }) => {
+
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [insurance, setInsurance] = useState([]);
     const [insuranceData, setInsuranceData] = useState({

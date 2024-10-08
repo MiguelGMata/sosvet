@@ -30,13 +30,6 @@ module.exports = {
     },
     soins: async (req, res) => {
         await models.Soin.findAll({
-            /*include: [
-                {
-                    model: User,
-                    as: "user",
-                    attributes: ["id", "first_name", "last_name"],
-                },
-            ],*/
         })
             .then(soin => {
                 res.json(soin)
@@ -49,7 +42,8 @@ module.exports = {
         await models.Soin.findOne({
             where: {
                 id: req.params.id
-            }})
+            }
+        })
             .then(soin => {
                 if (soin) {
                     res.json(soin)

@@ -134,7 +134,7 @@ const Animal = () => {
     const closeModal = () => {
         setError(null);
     };
-
+    console.log(perfilsAni)
     useEffect(() => {
         const fetchProfile = async () => {
             try {
@@ -158,7 +158,7 @@ const Animal = () => {
     if (errorMessage) {
         return <div>Erreur de chargement : {errorMessage.description}</div>;
     }
-
+    console.log(userProfile.id)
     return (
         <section className="card-profile-animal">
             <Title className="title-animal">Vos animaux de compagnie {userProfile.first_name}</Title>
@@ -191,8 +191,8 @@ const Animal = () => {
                                     <ButtonIcon onClick={() => handleDeleteAnimal(animal.id)}><FaTrashAlt /></ButtonIcon>
                                 </div>
                                 <div className="card-animal-soin">
-                                    <Care animalId={animal.id} />
-                                    <Insurance animalId={animal.id} />
+                                    <Care animalId={userProfile.id} />
+                                    <Insurance animalId={userProfile.id} />
                                 </div>
                             </Card>
                         )
