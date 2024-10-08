@@ -50,7 +50,7 @@ module.exports = () => {
             adresse: "3 rue Prisse D'Avennes",
             postal: "75014",
             lieux: "Paris",
-            phone: "01 45 40 77 argosparis37",
+            phone: "01 45 40 77 37",
             pictures: "https://www.pagesjaunes.fr/media/ugc/clinique_veterinaire_sarrette_07505600_152304772",
             createdAt: '2020-06-30',
             updatedAt: '2020-06-30'
@@ -72,7 +72,7 @@ module.exports = () => {
             adresse: "247 rue de Tolbiac",
             postal: "75013",
             lieux: "Paris",
-            phone: "0145885509",
+            phone: "01 45 88 55 09",
             pictures: "https://lh3.googleusercontent.com/p/AF1QipOpyCF_BjasJ3Gfclj8NiYS4PEI5BHNQi648TAI=w600-k",
             createdAt: '2020-06-30',
             updatedAt: '2020-06-30'
@@ -83,7 +83,7 @@ module.exports = () => {
             adresse: "61 rue Emile Raspail",
             postal: "94110",
             lieux: "Arcueil",
-            phone: "0145479570",
+            phone: "01 45 47 95 70",
             pictures: "https://cdn2.telephone.city/200/753115.jpg",
             createdAt: '2020-06-30',
             updatedAt: '2020-06-30'
@@ -116,7 +116,7 @@ module.exports = () => {
             adresse: "1 rue Aristide Briand",
             postal: "94250",
             lieux: "Gentylly",
-            phone: "0145462639",
+            phone: "01 45 46 26 39",
             pictures: "https://cdn-uploads2.starofservice.com/uploads/pj/thumbs-medium/starofservice_1aef0logosansfond.png",
             createdAt: '2020-06-30',
             updatedAt: '2020-06-30'
@@ -127,7 +127,7 @@ module.exports = () => {
             adresse: "19 rue Sophie Germain",
             postal: "75014",
             lieux: "Paris",
-            phone: "0143205519",
+            phone: "01 43 20 55 19",
             pictures: "https://www.votreveto.net/Uploads/acdvmonjeanpennequin/galeries/271/709edf69-0025-4e69-a417-8915748dc34d.jpg",
             createdAt: '2020-06-30',
             updatedAt: '2020-06-30'
