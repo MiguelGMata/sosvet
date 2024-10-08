@@ -7,6 +7,15 @@ const axiosInstance = axios.create({
   }
 });
 
+export const veteGet = async () => {
+  const response = await axiosInstance.get('/sos/veterinaires');
+  console.log(response.data, '<<--')
+  return response.data;
+
+}
+
+veteGet()
+
 // Interceptor para añadir el token a las solicitudes si existe
 axiosInstance.interceptors.request.use((config) => {
   const token = localStorage.getItem('token');
