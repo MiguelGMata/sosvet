@@ -13,21 +13,14 @@
       }
     }
   ],
-  "routes": [
+  "rewrites": [
     {
-      "src": "/redirect",
-      "status": 308,
-      "headers": {
-        "Location": "https://sosvet.vercel.app/"
-      }
+      "source": "/(.*)",
+      "destination": "/client//index.html"
     },
     {
-      "src": "/sos/(.*)",
-      "dest": "/index.js"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/client/$1"
+      "source": "/sos/(.*)",
+      "destination": "/index.js"
     }
   ]
 }
