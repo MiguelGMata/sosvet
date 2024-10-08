@@ -2,7 +2,7 @@ import axiosInstance from './axios';
 
 export const veterinarianGet = async () => {
   try {
-    const response = await axiosInstance.get('/veterinaires');
+    const response = await axiosInstance.get('/sos/veterinaires');
     return response.data;
   } catch (error) {
     if (error.response && error.response.data) {

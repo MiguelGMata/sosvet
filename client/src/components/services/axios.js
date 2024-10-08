@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL: process.env.NODE_ENV === 'production' ? 'https://sosvet.vercel.app/sos' : 'http://localhost:4000/sos',
+  baseURL: process.env.NODE_ENV === 'production' ? 'https://sosvet.vercel.app' : 'http://localhost:4000',
   headers: {
     'Content-Type': 'application/json'
   }
