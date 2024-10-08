@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import Title from '../../atoms/title/Title';
 import Image from '../../atoms/image/image';
+import { FaHeartbeat, FaAmbulance, FaPhoneAlt } from 'react-icons/fa';
 import gsap from 'gsap';//biblioteca para efecto de scroll animado
 import './cardVeterinarians.css';
 
@@ -20,7 +21,7 @@ const CardVeterinarians = ({ veterinarians }) => {
   const scrollRight = () => {
     gsap.to(scrollContainerRef.current, {
       scrollLeft: scrollContainerRef.current.scrollLeft + 310,
-      duration: 0.5, 
+      duration: 0.5,
       ease: "sine.out"
     });
   };
@@ -36,7 +37,7 @@ const CardVeterinarians = ({ veterinarians }) => {
       <div className="scroll-container-vet" ref={scrollContainerRef}>
         {veterinarians.map((vet) => (
           <div key={vet.id} className="card-veterinarians">
-            <Image image={vet.pictures} width='100%' height='200px' className="card-veterinarians-Image "/>
+            <Image image={vet.pictures} width='100%' height='200px' className="card-veterinarians-Image " />
             <div className="card-header-veterinarians">
               <Title className="title-card">{vet.nom}</Title>
             </div>
@@ -44,7 +45,7 @@ const CardVeterinarians = ({ veterinarians }) => {
               <p><strong>Adresse :</strong> {vet.adresse}</p>
               <p><strong>Lieux :</strong> {vet.lieux}</p>
               <p><strong>Postal :</strong> {vet.postal}</p>
-              <p><strong>Phone :</strong> {vet.phone}</p>
+              <p><a href={`tel:${vet.phone}`}><FaPhoneAlt /> </a> {vet.phone}</p>
             </div>
           </div>
         ))}
