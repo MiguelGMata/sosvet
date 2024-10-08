@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import Title from '../../atoms/title/Title';
 import Image from '../../atoms/image/image';
-import { FaHeartbeat, FaAmbulance, FaPhoneAlt } from 'react-icons/fa';
+import { FaPhoneAlt } from 'react-icons/fa';
 import gsap from 'gsap';//biblioteca para efecto de scroll animado
 import './cardVeterinarians.css';
 
