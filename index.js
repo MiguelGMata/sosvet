@@ -7,7 +7,7 @@ const logger = require('morgan');
 const { notFoundHandler, errorLogger, errorHandler } = require('./middlewares');
 
 const app = express()
-const port = process.env.PORT || 4000
+const port = process.env.PORT || 3000
 
 //Helmet
 app.use(helmet());
