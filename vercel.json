@@ -22,5 +22,15 @@
       "src": "/(.*)",
       "dest": "/client/$1"
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/sos/(.*)",
+      "destination": "/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/client/$1"
+    }
   ]
 }
