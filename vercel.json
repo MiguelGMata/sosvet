@@ -16,7 +16,7 @@
   "rewrites": [
     {
       "source": "/(.*)",
-      "destination": "/client/index.html"
+      "destination": "/client/$1"
     },
     {
       "source": "/sos/(.*)",
