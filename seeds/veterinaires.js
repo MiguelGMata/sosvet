@@ -161,7 +161,7 @@ module.exports = () => {
             postal: "75011",
             lieux: "Paris",
             phone: "01 43 79 58 13",
-            pictures: "https://www.justacote.com/photos_entreprises/cabe-pignon-emmanuelle-paris-13945426560.jpg",
+            pictures: "https://ik.imagekit.io/logoMGM/sosvet/veterinaire/pignon-cabe.jpg?updatedAt=1728462973308",
             createdAt: '2020-06-30',
             updatedAt: '2020-06-30'
         },
