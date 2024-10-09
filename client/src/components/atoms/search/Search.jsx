@@ -8,7 +8,7 @@ const Search = ({ handleSearch, search, onChange }) => {
         <form className="search-bar" onSubmit={handleSearch}>
             <Input
                 type="text"
-                placeholder="Rechercher"
+                placeholder="Rechercher par ville"
                 value={search}
                 onChange={onChange}
                 className="input-search"
