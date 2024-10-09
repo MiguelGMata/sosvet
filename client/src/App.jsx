@@ -4,6 +4,7 @@ import AppRouter from './components/routes/AppRouter'
 import Navbar from './components/organisms/navbar/Navbar';
 import Footer from './components/organisms/footer/Footer';
 import ScrollToTop from './components/ScrollToTop';
+import CookieConsent from './components/organisms/cookies/CookieConsent';
 import './styles/global.css'
 
 
@@ -17,6 +18,7 @@ const App = () => {
         <Navbar />
         <AppRouter />
         <Footer />
+        <CookieConsent />
       </div>
     </Router>
   )
