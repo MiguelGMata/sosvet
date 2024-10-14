@@ -161,7 +161,7 @@ const Animal = () => {
     console.log(userProfile.id)
     return (
         <section className="card-profile-animal">
-            <Title className="title-animal">Vos animaux de compagnie {userProfile.first_name}</Title>
+            <Title className="title-primary">Vos animaux de compagnie {userProfile.first_name}</Title>
             {error && <MessageModal message={error} onClose={closeModal} className="error" />}
             <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
                 <FormAnimal

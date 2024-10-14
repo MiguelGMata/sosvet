@@ -1,4 +1,4 @@
-import React,{ useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { veterinarianGet } from '../../services/veterinarianServices';
 import Search from '../../atoms/search/Search';
 import CardVeterinarians from '../card/CardVeterinarians';
@@ -12,11 +12,10 @@ const SearchBar = ({ className }) => {
     const [filterVet, setFilterVet] = useState([])
     const [errorMessage, setErrorMessage] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [adressList, setAdressList] = useState('');
 
     const handleSearch = (e) => {
         e.preventDefault();
-        const result = veterinarian.filter((vet) => 
+        const result = veterinarian.filter((vet) =>
             vet.lieux.toLowerCase().includes(search.toLowerCase()) ||
             vet.nom.toLowerCase().includes(search.toLowerCase())
         );
@@ -25,23 +24,24 @@ const SearchBar = ({ className }) => {
     }
 
     useEffect(() => {
-        const fechtVet = async() =>{
-            try{
+        const fechtVet = async () => {
+            try {
                 const data = await veterinarianGet();
                 setVeterinarian(data);
                 setFilterVet(data);
-            }catch{(error) =>{
-                setErrorMessage(error.data.description);
+            } catch {
+                (error) => {
+                    setErrorMessage(error.data.description);
                 }
 
-            }finally{
+            } finally {
                 setLoading(false);
-            }         
+            }
         }
         fechtVet();
-    },[]);
+    }, []);
 
-    if(loading){
+    if (loading) {
         return <div>Loading...</div>
     }
     if (errorMessage) {
@@ -57,7 +57,7 @@ const SearchBar = ({ className }) => {
                 <CardVeterinarians veterinarians={filterVet.length > 0 ? filterVet : veterinarian} />
                 <GoogleMap veterinarians={filterVet.length > 0 ? filterVet : veterinarian} />
             </div>
-      </div>
+        </div>
     );
 };
 export default SearchBar;

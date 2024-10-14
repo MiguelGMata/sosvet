@@ -5,17 +5,17 @@ import Title from '../../atoms/title/Title';
 
 
 const VeterinarianScreen = () => {
-    
 
-    return(
+
+    return (
         <>
             <main className="main-veterinarianScreen">
-            <section className="section-veterinarianScreen">
-                <Title>Rechercher un vétérinaire</Title>
-            </section>
-            <section className="section-veterinarianScreen">
-                    <SearchBar className="searchBar-block-vet"/>
-            </section>
+                <section className="section-veterinarianScreen">
+                    <Title className="title-primary">Rechercher un vétérinaire</Title>
+                </section>
+                <section className="section-veterinarianScreen">
+                    <SearchBar className="searchBar-block-vet" />
+                </section>
             </main>
         </>
     );

@@ -14,7 +14,7 @@
     border-radius: 50px;
     background-color: var(--white);
     border: 1px solid var(--grey);
-    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .searchBar-block:nth-child(1) {

@@ -1,14 +1,19 @@
-.section-profile{
+.section-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
     min-height: 100vh;
-    height: auto;  
-
+    height: auto;
 }
 
-.card-block-profile{
+.title-profile {
+    width: 100%;
+    background-color: aqua;
+    text-align: center;
+}
+
+.card-block-profile {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,31 +23,32 @@
     width: 100%;
 }
 
-.profile-animal-ul{
+.profile-animal-ul {
     list-style: none;
     text-align: left;
     width: 100%;
 }
+
 .profile-animal-ul li {
     margin: 5px;
     padding: 5px;
     background-color: rgb(255, 255, 255);
-  
+
 }
 
-.profile-animal-btn button{
+.profile-animal-btn button {
     margin: 5px;
 }
-@media (min-width: 768px){
-    .section-profile{
+
+@media (min-width: 768px) {
+    .section-profile {
         padding-top: 100px;
     }
-    .card-block-profile{
+
+    .card-block-profile {
         flex-direction: row;
     }
 }
 
 
-@media(max-width:767px){
-
-}
+@media(max-width:767px) {}

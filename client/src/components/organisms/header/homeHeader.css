@@ -1,4 +1,4 @@
-.header-homeheader{
+.header-homeheader {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,9 +7,10 @@
     height: 100vh;
     gap: 10px;
     margin-top: -100px;
+    padding-top: 20px;
 }
 
-.header-content{
+.header-content {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,11 +19,12 @@
 }
 
 
-@media (min-width: 1024px){
-    .header-homeheader{
+@media (min-width: 1024px) {
+    .header-homeheader {
         margin-top: 10px;
     }
-    .logo-header{
+
+    .logo-header {
         display: none;
     }
 }

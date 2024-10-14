@@ -60,7 +60,7 @@ const Profile = ({ onNavigate }) => {
 
     return (
         <section className="section-profile">
-            <Title>Bienvenu à votre profil</Title>
+            <Title className="title-primary">Bienvenu à votre profil</Title>
             <CardProfile firstName={userProfile.first_name} lastName={userProfile.last_name} email={userProfile.email} />
             <Title>Votre animal de compagnie</Title>
             <div className="card-block-profile">

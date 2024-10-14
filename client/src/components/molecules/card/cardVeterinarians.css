@@ -3,7 +3,8 @@
   align-items: center;
   position: relative;
   width: 100%;
-  overflow: hidden; /* Asegúrate de ocultar cualquier contenido fuera del contenedor */
+  overflow: hidden;
+  /* Asegúrate de ocultar cualquier contenido fuera del contenedor */
 
 }
 
@@ -12,10 +13,12 @@
   gap: 10px;
   overflow-x: auto;
   scroll-behavior: smooth;
-  scrollbar-width: none; /* Para Firefox */
-  -ms-overflow-style: none;  /* Para Internet Explorer y Edge */
+  scrollbar-width: none;
+  /* Para Firefox */
+  -ms-overflow-style: none;
+  /* Para Internet Explorer y Edge */
   padding: 5px;
-  
+
 }
 
 .scroll-container-vet::-webkit-scrollbar {
@@ -29,26 +32,33 @@
   flex-direction: column;
   align-items: center;
   background-color: var(--white);
-  min-width: 300px; /* Ajusta el tamaño mínimo para las tarjetas */
+  min-width: 300px;
+  /* Ajusta el tamaño mínimo para las tarjetas */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
 .card-veterinarians-Image {
   padding: 10px;
   border-radius: 20px;
 }
 
-.card-header-veterinarians{
+.card-header-veterinarians {
   width: 100%;
+  min-height: 60px;
   text-align: center;
+  padding: 5px;
 }
-.card-body-veterinarians{
+
+.card-body-veterinarians {
   width: 100%;
   padding: 10px;
 }
+
 .card-body-veterinarians p strong {
-  color: var(--green); 
+  color: var(--green);
 }
+
 .scroll-button {
   background-color: #ef5a8d;
   color: white;
@@ -63,13 +73,13 @@
 }
 
 .scroll-button.left {
-  left: 10px; /* Ajusta la posición de los botones */
+  left: 10px;
+  /* Ajusta la posición de los botones */
 }
 
 .scroll-button.right {
-  right: 10px; /* Ajusta la posición de los botones */
+  right: 10px;
+  /* Ajusta la posición de los botones */
 }
 
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}

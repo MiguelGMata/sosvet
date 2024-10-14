@@ -45,7 +45,7 @@ const CardVeterinarians = ({ veterinarians }) => {
               <p><strong>Adresse :</strong> {vet.adresse}</p>
               <p><strong>Lieux :</strong> {vet.lieux}</p>
               <p><strong>Postal :</strong> {vet.postal}</p>
-              <p><a href={`tel:${vet.phone}`}><FaPhoneAlt /></a> {vet.phone}</p>
+              <p><a href={`tel:${vet.phone}`} className="span"><FaPhoneAlt /></a> {vet.phone}</p>
             </div>
           </div>
         ))}
